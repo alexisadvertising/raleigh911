@@ -1,0 +1,7 @@
+{
+  "layout": "page.njk",
+  "permalink": "/addressing/",
+  "formKey": "streetSign",
+  "formLabel": "Request a street sign",
+  "formHelp": "request a street sign"
+}

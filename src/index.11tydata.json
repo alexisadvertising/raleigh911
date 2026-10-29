@@ -1,0 +1,29 @@
+{
+  "layout": "home.njk",
+  "title": "Home",
+  "cards": [
+    {
+      "title": "911 call taking & dispatch",
+      "text": "Highly trained telecommunicators answer every 911 call and immediately dispatch the appropriate agencies.",
+      "link": "/telecommunicators/",
+      "linkText": "How dispatch works"
+    },
+    {
+      "title": "Addressing & street signs",
+      "text": "We map and number every residential and business building in the county. Street signs are provided free for Raleigh County.",
+      "link": "/addressing/",
+      "linkText": "Addressing and street signs"
+    },
+    {
+      "title": "Alarm monitoring",
+      "text": "Burglar, panic, fire, and medical alarms are monitored 24 hours a day for Raleigh County residents for a minimal fee.",
+      "link": "/addressing/#alarms",
+      "linkText": "About alarm monitoring"
+    },
+    {
+      "title": "Emergency planning & LEPC",
+      "text": "The Local Emergency Planning Committee develops the response plan for accidents involving hazardous materials.",
+      "link": "/lepc/",
+      "linkText": "About the LEPC"
+    }
+  ]

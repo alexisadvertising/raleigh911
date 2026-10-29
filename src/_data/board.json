@@ -1,0 +1,28 @@
+{
+  "year": 2026,
+  "members": [
+    { "name": "Daniel C. Farley III", "role": "President" },
+    { "name": "Kevin W. Price", "role": "Vice President" },
+    { "name": "Noah Kapp", "role": "Secretary" },
+    { "name": "Jeffrey A. Miller", "role": "Treasurer" },
+    { "name": "Brad Mankins", "role": "Member" }
+  ],
+  "time": "5:00 p.m.",
+  "place": "Raleigh County Emergency Services Center, 162 Industrial Park Rd., Beaver, WV",
+  "extraNote": "The public is invited to attend.",
+  "meetings": [
+    { "date": "2026-01-20", "note": "" },
+    { "date": "2026-02-17", "note": "" },
+    { "date": "2026-03-16", "note": "" },
+    { "date": "2026-04-20", "note": "" },
+    { "date": "2026-05-18", "note": "" },
+    { "date": "2026-06-15", "note": "" },
+    { "date": "2026-07-06", "note": "Annual meeting" },
+    { "date": "2026-07-20", "note": "" },
+    { "date": "2026-08-17", "note": "" },
+    { "date": "2026-09-21", "note": "" },
+    { "date": "2026-10-19", "note": "" },
+    { "date": "2026-11-16", "note": "" },
+    { "date": "2026-12-21", "note": "" }
+  ]
+}

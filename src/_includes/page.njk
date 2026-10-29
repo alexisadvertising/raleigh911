@@ -1,0 +1,20 @@
+---
+layout: base.njk
+---
+<div class="page-head"><div class="wrap">
+  <h1>{{ title }}</h1>
+  {% if subtitle %}<p class="page-sub">{{ subtitle }}</p>{% endif %}
+</div></div>
+<div class="wrap page-body">
+  {% if heroImage %}<figure class="page-figure"><img src="{{ heroImage }}" alt="{{ heroAlt }}" width="1400" height="932"></figure>{% endif %}
+  <div class="prose">
+    {{ content | safe }}
+    {% if formKey %}
+      {% set url = forms[formKey] %}
+      <p class="form-cta">
+        {% if url %}<a class="btn btn-solid" href="{{ url }}">{{ formLabel }}</a>
+        {% else %}To {{ formHelp or 'make this request' }}, please call <a href="tel:{{ site.addressingPhone | tel }}">{{ site.addressingPhone }}</a>.{% endif %}
+      </p>
+    {% endif %}
+  </div>
+</div>

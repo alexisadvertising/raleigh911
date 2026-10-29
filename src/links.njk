@@ -1,0 +1,8 @@
+---
+layout: page.njk
+permalink: /links/
+title: Helpful Links
+---
+<ul class="plain-list link-list prose">
+{%- for l in links.links %}<li><a href="{{ l.url }}">{{ l.name }}</a></li>{%- endfor %}
+</ul>

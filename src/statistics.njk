@@ -1,0 +1,27 @@
+---
+layout: page.njk
+permalink: /statistics/
+title: Dispatch Statistics
+subtitle: Number of dispatches by year
+---
+<h2>Total dispatches by year</h2>
+{% set mx = stats | maxtotal %}
+<div class="bars" role="img" aria-label="Bar chart of total dispatches per year. The full numbers are in the tables below.">
+{%- for y in stats.years %}
+  {% set t = stats | total(loop.index0) %}
+  <div class="bar-row"><span>{{ y }}</span><span class="bar-track"><span class="bar-fill" style="display:block;width:{{ t | pct(mx) }}%"></span></span><span>{{ t | num }}</span></div>
+{%- endfor %}
+</div>
+
+<h2>By type of dispatch</h2>
+<div class="table-wrap">
+<table class="data">
+  <thead><tr><th scope="col">Year</th>{% for s in stats.series %}<th scope="col" class="n">{{ s.name }}</th>{% endfor %}</tr></thead>
+  <tbody>
+  {%- for y in stats.years %}
+    {% set i = loop.index0 %}
+    <tr><th scope="row">{{ y }}</th>{% for s in stats.series %}<td class="n">{{ s.values[i] | num }}</td>{% endfor %}</tr>
+  {%- endfor %}
+  </tbody>
+</table>
+</div>

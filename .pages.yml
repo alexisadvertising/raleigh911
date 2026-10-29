@@ -1,0 +1,194 @@
+# Settings for Pages CMS (pagescms.org): the editing screen staff use after logging in.
+media:
+  input: src/images
+  output: /images
+  categories: [image]
+content:
+  - name: board
+    label: Board of Directors (members and meeting dates)
+    type: file
+    path: src/_data/board.json
+    format: json
+    fields:
+      - { name: year, label: "Meeting schedule year", type: number }
+      - name: members
+        label: Board members
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "Name", type: string }
+          - { name: role, label: "Role (President, Member...)", type: string }
+      - name: meetings
+        label: Meeting dates
+        type: object
+        list: true
+        fields:
+          - { name: date, label: "Date", type: date }
+          - { name: note, label: "Note (optional, like \"Annual meeting\")", type: string }
+      - { name: time, label: "Start time", type: string }
+      - { name: place, label: "Place", type: string }
+      - { name: extraNote, label: "Extra sentence", type: string }
+  - name: notice
+    label: Home page notice (top of the home page)
+    type: file
+    path: src/_data/notice.json
+    format: json
+    fields:
+      - { name: show, label: "Show this notice?", type: boolean }
+      - { name: title, label: "Title", type: string }
+      - { name: text, label: "Message", type: text }
+  - name: home
+    label: Home page
+    type: file
+    path: src/index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: heroTitle, label: "Big headline", type: string }
+      - { name: heroLead, label: "Intro under the headline", type: text }
+      - { name: whatWeDo, label: "What we do paragraph", type: text }
+      - name: glance
+        label: At-a-glance numbers
+        type: object
+        list: true
+        fields:
+          - { name: label, label: "Label", type: string }
+          - { name: value, label: "Number", type: string }
+      - { name: body, label: "Director's letter", type: rich-text }
+  - name: stats
+    label: Statistics (dispatches by year)
+    type: file
+    path: src/_data/stats.json
+    format: json
+    fields:
+      - { name: years, label: "Years (one per box, in order)", type: number, list: true }
+      - name: series
+        label: Dispatch types
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "Type (Law enforcement, Fire...)", type: string }
+          - { name: values, label: "Counts (same order as the years)", type: number, list: true }
+  - name: lepc_graph
+    label: LEPC graph picture
+    type: file
+    path: src/_data/lepc.json
+    format: json
+    fields:
+      - { name: graphImage, label: "Graph picture", type: image }
+      - { name: graphCaption, label: "Caption", type: string }
+      - { name: graphAlt, label: "Describe the graph for people who cannot see it", type: text }
+  - name: phones
+    label: Phone numbers
+    type: file
+    path: src/_data/phones.json
+    format: json
+    fields:
+      - name: groups
+        label: Groups (Law Enforcement, Fire, Health...)
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "Group name", type: string }
+          - name: items
+            label: Numbers
+            type: object
+            list: true
+            fields:
+              - { name: name, label: "Name", type: string }
+              - { name: number, label: "Phone number", type: string }
+  - name: staff
+    label: Contact page staff list
+    type: file
+    path: src/_data/staff.json
+    format: json
+    fields:
+      - name: people
+        label: People
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "Name", type: string }
+          - { name: role, label: "Job title", type: string }
+          - { name: show, label: "Show on the site?", type: boolean }
+  - name: links
+    label: Helpful links
+    type: file
+    path: src/_data/links.json
+    format: json
+    fields:
+      - name: links
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "Link name", type: string }
+          - { name: url, label: "Web address", type: string }
+  - name: forms
+    label: Form links (Google Forms)
+    type: file
+    path: src/_data/forms.json
+    format: json
+    fields:
+      - { name: streetSign, label: "Street sign request form link", type: string }
+      - { name: tour, label: "Tour request form link", type: string }
+      - { name: resource, label: "Resource request form link", type: string }
+  - name: downloads
+    label: Downloads (PDFs)
+    type: file
+    path: src/_data/downloads.json
+    format: json
+    fields:
+      - name: items
+        type: object
+        list: true
+        fields:
+          - { name: title, label: "Title", type: string }
+          - { name: file, label: "File", type: file }
+          - { name: note, label: "Note (optional)", type: string }
+  - name: about
+    label: About the EOC page
+    type: file
+    path: src/about.md
+    format: yaml-frontmatter
+    fields: [ { name: title, type: string }, { name: body, type: rich-text } ]
+  - name: addressing
+    label: Addressing and street signs page
+    type: file
+    path: src/addressing.md
+    format: yaml-frontmatter
+    fields: [ { name: title, type: string }, { name: body, type: rich-text } ]
+  - name: telecommunicators
+    label: Telecommunicators page
+    type: file
+    path: src/telecommunicators.md
+    format: yaml-frontmatter
+    fields: [ { name: title, type: string }, { name: body, type: rich-text } ]
+  - name: lepc
+    label: LEPC page text
+    type: file
+    path: src/lepc.md
+    format: yaml-frontmatter
+    fields: [ { name: title, type: string }, { name: body, type: rich-text } ]
+  - name: community
+    label: Community page
+    type: file
+    path: src/community.md
+    format: yaml-frontmatter
+    fields: [ { name: title, type: string }, { name: body, type: rich-text } ]
+  - name: terms
+    label: Terms of use
+    type: file
+    path: src/terms.md
+    format: yaml-frontmatter
+    fields: [ { name: title, type: string }, { name: body, type: rich-text } ]
+  - name: site
+    label: Address, phone and email (appears everywhere)
+    type: file
+    path: src/_data/site.json
+    format: json
+    fields:
+      - { name: nonEmergency, label: "Non-emergency phone", type: string }
+      - { name: addressingPhone, label: "Addressing and alarms phone", type: string }
+      - { name: email, label: "General email", type: string }
+      - { name: lepcEmail, label: "LEPC email", type: string }
+      - { name: street, label: "Street address", type: string }
+      - { name: city, label: "City, state, ZIP", type: string }

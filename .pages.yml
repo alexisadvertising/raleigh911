@@ -186,6 +186,10 @@ content:
     path: src/_data/site.json
     format: json
     fields:
+      - { name: name, label: "Full agency name", type: string }
+      - { name: shortName, label: "Short name (top of every page)", type: string }
+      - { name: tagline, label: "Line under the name", type: string }
+      - { name: emergencyText, label: "Red 911 bar message", type: string }
       - { name: nonEmergency, label: "Non-emergency phone", type: string }
       - { name: addressingPhone, label: "Addressing and alarms phone", type: string }
       - { name: email, label: "General email", type: string }

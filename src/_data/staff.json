@@ -22,13 +22,13 @@
     },
     {
       "name": "Richard Filipek",
-      "role": "",
-      "show": false
+      "role": "Deputy Director",
+      "show": true
     },
     {
       "name": "Cody Fortner",
-      "role": "",
-      "show": false
+      "role": "911/ Communications Chief",
+      "show": true
     }
   ]
 }

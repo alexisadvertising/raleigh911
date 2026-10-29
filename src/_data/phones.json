@@ -180,8 +180,7 @@
           "number": "304-934-7772"
         },
         {
-          "name": "Whitesville Ambulance Service",
-          "number": ""
+          "name": "Whitesville Ambulance Service"
         },
         {
           "name": "Beckley Fire Dept.",
@@ -306,6 +305,5 @@
         }
       ]
     }
-  ],
-  "note": "Numbers carried over from the old website. Please verify before relying on them."
+  ]
 }

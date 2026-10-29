@@ -1,26 +1,15 @@
 ---
-layout: home.njk
-title: Home
-heroTitle: Answering Raleigh County's 911 calls, 24 hours a day.
-heroLead: The Raleigh County Emergency Operating Center provides emergency assistance to the citizens of Beckley and Raleigh County around the clock, every day of the year, in constant contact with police, fire, and ambulance units and the State Office of Emergency Services.
-whatWeDo: Task assignments are diverse within the agency. They include 911 call taking and dispatching, aerial mapping, physical addressing of structures, address verification for vital records, planning for response and recovery to disasters, and working with local, state, and federal agencies to acquire grants and coordinate activities for first responders to help protect our residents during and after a disaster strikes.
-cards:
-  - title: 911 call taking & dispatch
-    text: Highly trained telecommunicators answer every 911 call and immediately dispatch the appropriate agencies.
-    link: /telecommunicators/
-    linkText: How dispatch works
-  - title: Addressing & street signs
-    text: We map and number every residential and business building in the county. Street signs are provided free for Raleigh County.
-    link: /addressing/
-    linkText: Addressing and street signs
-  - title: Alarm monitoring
-    text: Burglar, panic, fire, and medical alarms are monitored 24 hours a day for Raleigh County residents for a minimal fee.
-    link: /addressing/#alarms
-    linkText: About alarm monitoring
-  - title: Emergency planning & LEPC
-    text: The Local Emergency Planning Committee develops the response plan for accidents involving hazardous materials.
-    link: /lepc/
-    linkText: About the LEPC
+heroTitle: Answering Raleigh County's 911 calls, 24 hours a day, every day of the year.
+heroLead: The Raleigh County Emergency Operating Center provides emergency
+  assistance to the citizens of Beckley and Raleigh County around the clock,
+  every day of the year, in constant contact with police, fire, and ambulance
+  units and the State Office of Emergency Services.
+whatWeDo: Task assignments are diverse within the agency. They include 911 call
+  taking and dispatching, aerial mapping, physical addressing of structures,
+  address verification for vital records, planning for response and recovery to
+  disasters, and working with local, state, and federal agencies to acquire
+  grants and coordinate activities for first responders to help protect our
+  residents during and after a disaster strikes.
 glance:
   - label: People served
     value: 79,000+

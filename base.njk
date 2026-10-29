@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title and page.url != "/" %}{{ title }} | {% endif %}Raleigh County 911 &amp; Emergency Services</title>
+  <meta name="description" content="{{ description or 'Official website of the Raleigh County Emergency Services Authority: 911 dispatch, addressing and street signs, alarm monitoring, and emergency management for Beckley and Raleigh County, WV.' }}">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="emergency-bar" role="region" aria-label="Emergency notice">
+    <p><strong>{{ site.emergencyText }}</strong> For non-emergencies, call <a href="tel:{{ site.nonEmergency | tel }}">{{ site.nonEmergency }}</a>.</p>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="/">
+        <img class="brand-logo" src="/images/logo-white.png" alt="" height="84">
+        <span class="brand-text">
+          <span class="brand-name">{{ site.shortName }}</span>
+          <span class="brand-sub">{{ site.tagline }}</span>
+        </span>
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Main">
+      <ul class="wrap nav-list">
+        {%- set items = [["/","Home"],["/about/","About the EOC"],["/addressing/","Addressing & Signs"],["/telecommunicators/","Dispatch"],["/lepc/","LEPC"],["/board/","Board"],["/community/","Community"],["/statistics/","Statistics"],["/phone-numbers/","Phone Numbers"],["/contact/","Contact"]] -%}
+        {%- for i in items %}
+        <li><a href="{{ i[0] }}"{% if page.url == i[0] %} aria-current="page"{% endif %}>{{ i[1] }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h2 class="footer-title">{{ site.name }}</h2>
+        <address>
+          {{ site.street }}<br>{{ site.city }}<br>
+          <a href="tel:{{ site.nonEmergency | tel }}">{{ site.nonEmergency }}</a><br>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </address>
+      </div>
+      <nav aria-label="Footer">
+        <h2 class="footer-title">More</h2>
+        <ul class="plain-list">
+          <li><a href="/downloads/">Downloads</a></li>
+          <li><a href="/links/">Links</a></li>
+          <li><a href="/terms/">Terms of use &amp; site policy</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer-title">In an emergency</h2>
+        <p class="footer-911">Dial <strong>911</strong></p>
+        <p>From any phone, any time. Stay on the line and follow the telecommunicator&rsquo;s instructions.</p>
+      </div>
+    </div>
+    <p class="wrap legal">&copy; {{ build.year }} {{ site.name }}. Established 1982 by House Bill 2108.</p>
+  </footer>
+  <script src="/js/site.js" defer></script>
+</body>
+</html>

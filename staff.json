@@ -1,0 +1,34 @@
+{
+  "people": [
+    {
+      "name": "John Zilinski",
+      "role": "Director",
+      "show": true
+    },
+    {
+      "name": "Kevin Roop",
+      "role": "Operations Chief",
+      "show": true
+    },
+    {
+      "name": "Stephanie Cook",
+      "role": "Addressing Coordinator",
+      "show": true
+    },
+    {
+      "name": "Tabitha Horn",
+      "role": "Emergency Program Manager",
+      "show": true
+    },
+    {
+      "name": "Richard Filipek",
+      "role": "",
+      "show": false
+    },
+    {
+      "name": "Cody Fortner",
+      "role": "",
+      "show": false
+    }
+  ]
+}

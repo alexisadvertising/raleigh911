@@ -1,0 +1,21 @@
+{
+  "groups": [
+    {
+      "name": "Raleigh County Emergency Services",
+      "items": [
+        {
+          "name": "Emergency",
+          "number": "911"
+        },
+        {
+          "name": "Non-emergency / EOC",
+          "number": "304-255-0911"
+        },
+        {
+          "name": "Addressing and alarms",
+          "number": "304-255-0970"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+---
+layout: page.njk
+permalink: /contact/
+title: Contact Us
+---
+<h2>Raleigh County Emergency Services Authority</h2>
+<address>{{ site.street }}<br>{{ site.city }}</address>
+<p>Non-emergency / EOC: <a href="tel:{{ site.nonEmergency | tel }}">{{ site.nonEmergency }}</a><br>
+Addressing and alarms: <a href="tel:{{ site.addressingPhone | tel }}">{{ site.addressingPhone }}</a><br>
+General questions or comments: <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+LEPC: <a href="mailto:{{ site.lepcEmail }}">{{ site.lepcEmail }}</a></p>
+
+<h2>Staff</h2>
+<ul class="contact-grid plain-list">
+{%- for p in staff.people %}{% if p.show %}
+  <li class="contact-card"><strong>{{ p.name }}</strong><br>{{ p.role }}</li>
+{%- endif %}{% endfor %}
+</ul>
+
+<h2 id="directions">Directions to the Raleigh County 911 Center</h2>
+<p class="prose">From I-64 eastbound, take EXIT 125B onto AIRPORT RD. Continue straight on Airport Rd until the entrance of the Raleigh County Memorial Airport and turn RIGHT onto INDUSTRIAL PARK RD. Turn the SECOND RIGHT into the Raleigh County Emergency Operations Center / 911 facility.</p>
+<address>Raleigh County Emergency Services<br>{{ site.street }}<br>{{ site.city }}</address>

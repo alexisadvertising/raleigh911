@@ -1,0 +1,12 @@
+{
+  "name": "Raleigh County Emergency Services Authority",
+  "shortName": "Raleigh County Emergency Services",
+  "tagline": "911 & Emergency Management · Beckley, WV",
+  "emergencyText": "IF THIS IS AN EMERGENCY, DIAL 911 immediately.",
+  "nonEmergency": "304-255-0911",
+  "addressingPhone": "304-255-0970",
+  "email": "raleigh911@raleigh911.org",
+  "lepcEmail": "lepc@raleighcounty.gov",
+  "street": "162 Industrial Park Rd",
+  "city": "Beaver, WV 25813"
+}

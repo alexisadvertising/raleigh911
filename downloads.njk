@@ -1,0 +1,13 @@
+---
+layout: page.njk
+permalink: /downloads/
+title: Downloads
+subtitle: Forms, guidelines and public documents.
+---
+{% if downloads.items.length %}
+<ul class="plain-list link-list prose">
+{%- for d in downloads.items %}<li><a href="{{ d.file }}">{{ d.title }}</a>{% if d.note %} <span>({{ d.note }})</span>{% endif %}</li>{%- endfor %}
+</ul>
+{% else %}
+<p>Documents will be posted here soon. For anything you need now, call <a href="tel:{{ site.nonEmergency | tel }}">{{ site.nonEmergency }}</a>.</p>
+{% endif %}

@@ -1,0 +1,20 @@
+---
+layout: page.njk
+permalink: /board/
+title: Board of Directors
+subtitle: Raleigh County Emergency Services Authority
+---
+<h2>Board members</h2>
+<ul class="board-grid">
+{%- for m in board.members %}
+  <li><strong>{{ m.name }}</strong>{{ m.role }}</li>
+{%- endfor %}
+</ul>
+
+<h2>{{ board.year }} scheduled board meetings</h2>
+<ul class="meeting-list">
+{%- for m in board.meetings %}
+  <li data-meeting="{{ m.date }}">{{ m.date | longdate }}{% if m.note %}<span class="tag">{{ m.note }}</span>{% endif %}</li>
+{%- endfor %}
+</ul>
+<p>All board meetings convene at <strong>{{ board.time }}</strong> at the {{ board.place }}. {{ board.extraNote }}</p>

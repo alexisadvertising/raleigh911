@@ -1,0 +1,97 @@
+---
+layout: base.njk
+---
+{% if notice.show %}
+<div class="notice-bar" role="region" aria-label="Public notice"><div class="wrap"><strong>{{ notice.title }}:</strong> {{ notice.text }}</div></div>
+{% endif %}
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1 id="hero-title">{{ heroTitle }}</h1>
+      <p class="hero-lead">{{ heroLead }}</p>
+      <ul class="button-row">
+        <li><a class="btn btn-primary" href="/addressing/">Request a street sign</a></li>
+        <li><a class="btn btn-secondary" href="/phone-numbers/">Find a phone number</a></li>
+      </ul>
+    </div>
+    <figure class="hero-figure">
+      <img src="/images/eoc-building.jpg" alt="The Raleigh County Emergency Services building in Beaver, West Virginia, a long single-story brick building with a green metal roof." width="1400" height="932">
+    </figure>
+  </div>
+</section>
+
+<div class="wrap layout">
+  <div class="content">
+    <section aria-labelledby="welcome-title">
+      <h2 id="welcome-title">From the Desk of the Director</h2>
+      <div class="prose">{{ content | safe }}</div>
+    </section>
+
+    <section aria-labelledby="services-title">
+      <h2 id="services-title">What we do</h2>
+      <p>{{ whatWeDo }}</p>
+      <ul class="card-grid">
+        {%- for c in cards %}
+        <li class="card"><h3>{{ c.title }}</h3><p>{{ c.text }}</p><a href="{{ c.link }}">{{ c.linkText }}</a></li>
+        {%- endfor %}
+      </ul>
+    </section>
+
+    <section aria-labelledby="numbers-title">
+      <h2 id="numbers-title">The center at a glance</h2>
+      <dl class="stat-list">
+        {%- for s in glance %}
+        <div class="stat"><dt>{{ s.label }}</dt><dd>{{ s.value }}</dd></div>
+        {%- endfor %}
+      </dl>
+      <p class="note"><a href="/statistics/">See dispatch statistics by year</a></p>
+    </section>
+
+    {% if forms.resource %}
+    <section aria-labelledby="resource-title">
+      <h2 id="resource-title">Resource request</h2>
+      <p>Agencies and organizations can ask for resources or assistance using our request form.</p>
+      <p><a class="btn btn-solid" href="{{ forms.resource }}">Open the resource request form</a></p>
+    </section>
+    {% endif %}
+  </div>
+
+  <aside class="sidebar" aria-label="Quick information">
+    <section class="panel" aria-labelledby="quick-title">
+      <h2 id="quick-title">Phone numbers</h2>
+      <dl class="number-list">
+        <div><dt>Emergency</dt><dd><a class="strong-link" href="tel:911">911</a></dd></div>
+        <div><dt>Non-emergency / EOC</dt><dd><a href="tel:{{ site.nonEmergency | tel }}">{{ site.nonEmergency }}</a></dd></div>
+        <div><dt>Addressing &amp; alarms</dt><dd><a href="tel:{{ site.addressingPhone | tel }}">{{ site.addressingPhone }}</a></dd></div>
+      </dl>
+      <p><a href="/phone-numbers/">View the full phone directory</a></p>
+    </section>
+
+    <section class="panel" aria-labelledby="board-title">
+      <h2 id="board-title">Board meetings</h2>
+      <p>Meetings begin at <strong>{{ board.time }}</strong>. The public is invited to attend.</p>
+      <ul class="plain-list" data-next-meetings>
+        {%- for m in board.meetings %}
+        <li data-date="{{ m.date }}">{{ m.date | longdate }}{% if m.note %} ({{ m.note }}){% endif %}</li>
+        {%- endfor %}
+      </ul>
+      <p data-no-meetings hidden>See the Board page for the schedule.</p>
+      <p><a href="/board/">Board members &amp; full schedule</a></p>
+    </section>
+
+    <section class="panel" aria-labelledby="visit-title">
+      <h2 id="visit-title">Visit or write to us</h2>
+      <address>{{ site.shortName }}<br>{{ site.street }}<br>{{ site.city }}</address>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p><a href="/contact/#directions">Directions to our building</a></p>
+    </section>
+
+    <section class="panel" aria-labelledby="links-title">
+      <h2 id="links-title">Helpful links</h2>
+      <ul class="plain-list link-list">
+        {%- for l in links.links | head(5) %}<li><a href="{{ l.url }}">{{ l.name }}</a></li>{%- endfor %}
+      </ul>
+      <p><a href="/links/">All links</a></p>
+    </section>
+  </aside>
+</div>

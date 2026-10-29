@@ -1,0 +1,8 @@
+---
+layout: page.njk
+---
+{{ content | safe }}
+{% if lepc.graphImage %}
+<h2>HAZ-MAT statistics</h2>
+<figure class="page-figure"><img src="{{ lepc.graphImage }}" alt="{{ lepc.graphAlt or lepc.graphCaption }}"><figcaption>{{ lepc.graphCaption }}</figcaption></figure>
+{% endif %}

@@ -1,0 +1,36 @@
+{
+  "links": [
+    {
+      "name": "Ready.gov: Natural disasters, be informed",
+      "url": "https://www.ready.gov/be-informed"
+    },
+    {
+      "name": "FEMA",
+      "url": "https://www.fema.gov/"
+    },
+    {
+      "name": "American Red Cross",
+      "url": "https://www.redcross.org/"
+    },
+    {
+      "name": "West Virginia State Police",
+      "url": "https://wvstatepolice.com/"
+    },
+    {
+      "name": "WV Homeland Security & Emergency Management",
+      "url": "https://dhsem.wv.gov/"
+    },
+    {
+      "name": "WV Public Service Commission",
+      "url": "https://www.psc.state.wv.us/"
+    },
+    {
+      "name": "National Emergency Number Association (NENA)",
+      "url": "https://www.nena.org/"
+    },
+    {
+      "name": "APCO International",
+      "url": "https://www.apcointl.org/"
+    }
+  ]
+}

@@ -103,6 +103,7 @@ content:
             fields:
               - { name: name, label: "Name", type: string }
               - { name: number, label: "Phone number", type: string }
+      - { name: note, label: "Note under the phone numbers (leave empty to hide)", type: text }
   - name: staff
     label: Contact page staff list
     type: file
@@ -227,3 +228,17 @@ content:
     fields:
       - { name: facebookUrl, label: "Facebook page web address (leave empty to hide)", type: string }
       - { name: showFeed, label: "Show recent posts on the home page?", type: boolean }
+  - name: radio
+    label: Radio frequencies
+    type: file
+    path: src/_data/radio.json
+    format: json
+    fields:
+      - { name: title, label: "Heading", type: string }
+      - name: items
+        label: Frequencies
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "Agency", type: string }
+          - { name: freq, label: "Frequency", type: string }

@@ -24,15 +24,18 @@
           <span class="brand-sub">{{ site.tagline }}</span>
         </span>
       </a>
+      <details class="menu" id="site-menu">
+        <summary><span class="menu-icon" aria-hidden="true"></span><span>Menu</span></summary>
+        <nav class="menu-panel" aria-label="Main">
+          <ul>
+            {%- set items = [["/","Home"],["/about/","About the EOC"],["/addressing/","Addressing & Signs"],["/telecommunicators/","Dispatch"],["/lepc/","LEPC"],["/board/","Board of Directors"],["/community/","Community"],["/statistics/","Statistics"],["/phone-numbers/","Phone Numbers"],["/links/","Links"],["/downloads/","Downloads"],["/contact/","Contact"]] -%}
+            {%- for i in items %}
+            <li><a href="{{ i[0] }}"{% if page.url == i[0] %} aria-current="page"{% endif %}>{{ i[1] }}</a></li>
+            {%- endfor %}
+          </ul>
+        </nav>
+      </details>
     </div>
-    <nav class="site-nav" aria-label="Main">
-      <ul class="wrap nav-list">
-        {%- set items = [["/","Home"],["/about/","About the EOC"],["/addressing/","Addressing & Signs"],["/telecommunicators/","Dispatch"],["/lepc/","LEPC"],["/board/","Board"],["/community/","Community"],["/statistics/","Statistics"],["/phone-numbers/","Phone Numbers"],["/contact/","Contact"]] -%}
-        {%- for i in items %}
-        <li><a href="{{ i[0] }}"{% if page.url == i[0] %} aria-current="page"{% endif %}>{{ i[1] }}</a></li>
-        {%- endfor %}
-      </ul>
-    </nav>
   </header>
 
   <main id="main">

@@ -380,3 +380,39 @@ table.data td.n, table.data th.n { text-align: right; font-variant-numeric: tabu
 .nav-list a { padding-inline: .72rem; font-size: .95rem; }
 @media (max-width: 40rem) { .nav-list a { padding-inline: var(--gutter); } }
 .meeting-list li.is-past { opacity: 1; background: #eceff5; color: #4a5266; }
+
+/* Corner dropdown menu */
+.site-header { position: relative; }
+.header-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.menu { position: relative; flex: none; }
+.menu summary {
+  list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: .6rem;
+  padding: .7rem 1.1rem; min-height: 2.75rem; border: 2px solid rgba(255,255,255,.85); border-radius: var(--radius);
+  color: #fff; font-weight: 700; font-size: 1rem; user-select: none;
+}
+.menu summary::-webkit-details-marker { display: none; }
+.menu summary:hover, .menu[open] summary { background: rgba(255,255,255,.14); }
+.menu summary:focus-visible { outline-color: var(--amber); box-shadow: none; }
+.menu-icon, .menu-icon::before, .menu-icon::after { display: block; width: 1.25rem; height: 2px; background: #fff; border-radius: 2px; content: ""; }
+.menu-icon { position: relative; }
+.menu-icon::before { position: absolute; top: -6px; left: 0; }
+.menu-icon::after { position: absolute; top: 6px; left: 0; }
+.menu-panel {
+  position: absolute; right: 0; top: calc(100% + .5rem); z-index: 50;
+  width: min(19rem, calc(100vw - 2rem)); background: #fff; border-radius: var(--radius);
+  border-top: 4px solid var(--amber); box-shadow: 0 12px 32px rgba(7,20,52,.35); padding: .4rem 0;
+}
+.menu-panel ul { list-style: none; margin: 0; padding: 0; }
+.menu-panel a {
+  display: block; padding: .8rem 1.25rem; min-height: 2.75rem; color: var(--green-900);
+  font-weight: 600; text-decoration: none; border-left: 4px solid transparent;
+}
+.menu-panel a:hover { background: #eef2fa; color: var(--green-900); }
+.menu-panel a[aria-current="page"] { border-left-color: var(--amber); background: #f4f6fa; }
+.menu-panel :focus-visible { outline-offset: -3px; box-shadow: none; }
+@media (max-width: 40rem) {
+  .header-row { padding-block: .8rem; }
+  .brand-sub { display: none; }
+  .menu summary span:last-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .menu summary { padding: .7rem .8rem; }
+}

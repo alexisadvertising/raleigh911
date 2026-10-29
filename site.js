@@ -15,3 +15,11 @@
     if (past(el.getAttribute("data-meeting"))) el.classList.add("is-past");
   });
 })();
+
+// Close the menu with Escape or when clicking elsewhere.
+(function () {
+  var m = document.getElementById("site-menu");
+  if (!m) return;
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && m.open) { m.open = false; m.querySelector("summary").focus(); } });
+  document.addEventListener("click", function (e) { if (m.open && !m.contains(e.target)) m.open = false; });
+})();

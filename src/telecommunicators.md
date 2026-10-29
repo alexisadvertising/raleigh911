@@ -1,9 +1,9 @@
 ---
-layout: page.njk
-permalink: /telecommunicators/
 title: Telecommunicators
 ---
-The consoles our telecommunicators use have a four-monitor computer system. When a 911 call is received, information is readily available to assist the dispatcher.
+![A dispatch console with four monitors showing call-taking, dispatch and mapping screens, with the dispatch floor behind it.](/images/dispatch-console.jpg)
+
+The picture above shows one of the consoles our telecommunicators use. Each has a four-monitor computer system. When a 911 call is received, information is readily available to assist the dispatcher.
 
 The system provides detailed information about the caller using the Solacom phone system. Using the caller's phone number, the Spillman Flex computer-aided dispatch system displays the caller's name, address and directions, as well as the nearest fire, emergency medical services transport and police agency to respond, by using an emergency service number.
 

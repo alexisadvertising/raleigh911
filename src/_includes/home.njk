@@ -47,11 +47,14 @@ layout: base.njk
       <p class="note"><a href="/statistics/">See dispatch statistics by year</a></p>
     </section>
 
-    {% if forms.resource %}
+    {% if forms.resourcePdf or forms.resource %}
     <section aria-labelledby="resource-title">
       <h2 id="resource-title">Resource request</h2>
       <p>Agencies and organizations can ask for resources or assistance using our request form.</p>
-      <p><a class="btn btn-solid" href="{{ forms.resource }}">Open the resource request form</a></p>
+      <p>
+        {% if forms.resource %}<a class="btn btn-solid" href="{{ forms.resource }}">Fill out the form online</a>{% endif %}
+        {% if forms.resourcePdf %}<a class="btn {% if forms.resource %}btn-outline{% else %}btn-solid{% endif %}" href="{{ forms.resourcePdf }}">Download the form (PDF)</a>{% endif %}
+      </p>
     </section>
     {% endif %}
   </div>
@@ -85,6 +88,15 @@ layout: base.njk
       <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
       <p><a href="/contact/#directions">Directions to our building</a></p>
     </section>
+
+    {% if social.facebookUrl and social.showFeed %}
+    <section class="panel" aria-labelledby="fb-title">
+      <h2 id="fb-title">Facebook</h2>
+      <iframe class="fb-feed" title="Facebook posts from {{ site.shortName }}" loading="lazy" height="500" width="340"
+        src="https://www.facebook.com/plugins/page.php?href={{ social.facebookUrl | urlencode }}&amp;tabs=timeline&amp;width=340&amp;height=500&amp;small_header=true&amp;hide_cover=true&amp;show_facepile=false"></iframe>
+      <p><a href="{{ social.facebookUrl }}">Open our Facebook page</a></p>
+    </section>
+    {% endif %}
 
     <section class="panel" aria-labelledby="links-title">
       <h2 id="links-title">Helpful links</h2>

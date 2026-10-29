@@ -1,10 +1,5 @@
 ---
-layout: page.njk
-permalink: /community/
 title: Community Involvement
-formKey: tour
-formLabel: Request a tour
-formHelp: arrange a tour
 ---
 The Raleigh County Emergency Services is proud of its involvement with the community.
 

@@ -1,24 +1,16 @@
 ---
-heroTitle: Answering Raleigh County's 911 calls, 24 hours a day, every day of the year.
-heroLead: The Raleigh County Emergency Operating Center provides emergency
-  assistance to the citizens of Beckley and Raleigh County around the clock,
-  every day of the year, in constant contact with police, fire, and ambulance
-  units and the State Office of Emergency Services.
-whatWeDo: Task assignments are diverse within the agency. They include 911 call
-  taking and dispatching, aerial mapping, physical addressing of structures,
-  address verification for vital records, planning for response and recovery to
-  disasters, and working with local, state, and federal agencies to acquire
-  grants and coordinate activities for first responders to help protect our
-  residents during and after a disaster strikes.
+heroTitle: Answering Raleigh County's 911 calls, 24 hours a day.
+heroLead: The Raleigh County Emergency Operating Center provides emergency assistance to the citizens of Beckley and Raleigh County around the clock, every day of the year, in constant contact with police, fire, and ambulance units and the State Office of Emergency Services.
+whatWeDo: Task assignments are diverse within the agency. They include 911 call taking and dispatching, aerial mapping, physical addressing of structures, address verification for vital records, planning for response and recovery to disasters, and working with local, state, and federal agencies to acquire grants and coordinate activities for first responders to help protect our residents during and after a disaster strikes.
 glance:
-  - label: People served
-    value: 79,000+
-  - label: Calls processed each year
-    value: 180,000–200,000
-  - label: Staff members
-    value: "33"
-  - label: Coverage
-    value: 24 hours / 7 days
+- label: People served
+  value: 79,000+
+- label: Calls processed each year
+  value: 180,000–200,000
+- label: Staff members
+  value: '33'
+- label: Coverage
+  value: 24 hours / 7 days
 ---
 The Raleigh County Emergency Services Authority was established in 1982 by House Bill 2108. The agency provides services to the residents of Raleigh County, as well as those individuals who visit or travel through the county.
 

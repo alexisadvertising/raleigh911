@@ -416,3 +416,33 @@ table.data td.n, table.data th.n { text-align: right; font-variant-numeric: tabu
   .menu summary span:last-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .menu summary { padding: .7rem .8rem; }
 }
+
+/* Photos and Facebook */
+.photo-grid { list-style: none; padding: 0; margin: 0 0 2rem; display: grid; gap: 1rem; grid-template-columns: 1fr; }
+.photo-grid figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.photo-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.photo-grid figcaption { padding: .7rem .9rem; font-size: .95rem; color: var(--ink-soft); }
+@media (min-width: 40rem) { .photo-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 64rem) { .photo-grid { grid-template-columns: repeat(3, 1fr); } }
+.fb-feed { width: 100%; max-width: 340px; border: 0; background: #fff; }
+.prose ul.photo-grid { padding-left: 0; }
+.prose:has(.photo-grid) { max-width: none; }
+
+/* Footer Facebook, phone list, inline photos */
+.footer-social { margin-block: 1.5rem 0; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,.2); }
+.fb-link { display: inline-flex; align-items: center; gap: .6rem; font-weight: 600; text-decoration: none; }
+.fb-link:hover { text-decoration: underline; }
+.footer-social + .legal { margin-top: 1rem; border-top: 0; padding-top: 0; }
+.btn-outline { background: transparent; color: var(--green-900); border-color: var(--green-900); }
+.btn-outline:hover { background: #e6ecf8; color: var(--green-900); }
+.prose .btn + .btn { margin-left: .5rem; }
+.prose img { border-radius: var(--radius); border: 1px solid var(--line); margin: 1.25rem 0; width: 100%; max-height: 28rem; object-fit: cover; }
+.phone-groups { grid-template-columns: 1fr; align-items: start; }
+@media (min-width: 56rem) { .phone-groups { grid-template-columns: repeat(2, 1fr); } }
+.phone-group dd { text-align: right; }
+.radio-group { max-width: 34rem; }
+.prose:has(.phone-groups) { max-width: none; }
+.phone-groups { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)) !important; }
+.phone-group h2 { margin-top: .2rem; }
+.prose .phone-group, .prose .phone-groups { padding-left: 0; }
+.prose:has(.photo-grid), .prose:has(.phone-groups) { max-width: none; }

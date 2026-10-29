@@ -1,6 +1,4 @@
 ---
-layout: lepc.njk
-permalink: /lepc/
 title: Local Emergency Planning Committee (LEPC)
 ---
 ## What is the LEPC?

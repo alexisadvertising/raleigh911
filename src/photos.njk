@@ -1,0 +1,21 @@
+---
+layout: page.njk
+permalink: /photos/
+title: Photos
+---
+{% if gallery.intro %}<p class="prose">{{ gallery.intro }}</p>{% endif %}
+{% if gallery.photos.length %}
+<ul class="photo-grid">
+{%- for p in gallery.photos %}
+  <li>
+    <figure>
+      <a href="{{ p.image }}"><img src="{{ p.image }}" alt="{{ p.alt or p.caption }}" loading="lazy"></a>
+      {% if p.caption %}<figcaption>{{ p.caption }}</figcaption>{% endif %}
+    </figure>
+  </li>
+{%- endfor %}
+</ul>
+{% else %}
+<p class="prose">Photos are coming soon.</p>
+{% endif %}
+{% if social.facebookUrl %}<p class="prose">More photos and updates are on our <a href="{{ social.facebookUrl }}">Facebook page</a>.</p>{% endif %}

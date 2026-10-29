@@ -1,5 +1,5 @@
 {
-  "graphImage": "",
-  "graphCaption": "HAZ-MAT calls in Raleigh County, 2025, by call type.",
-  "graphAlt": ""
+  "graphImage": "/images/hazmat-calls-2025.png",
+  "graphCaption": "HAZ-MAT calls in Raleigh County, 2025, by call type (approximate counts read from the chart).",
+  "graphAlt": "Bar chart of 2025 hazardous-material related calls by type. The highest are structure fire/rekindle at about 113, gas leak about 77, vehicle fire about 75, fire (not vegetation) and odor investigation about 69 each, and motor vehicle accident with fluid leak about 60. Illegal burn is about 42, transformer fire about 26, explosion about 15, sewer problem about 11, and the rest are under 5."
 }

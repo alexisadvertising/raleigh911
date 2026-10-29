@@ -1,0 +1,30 @@
+{
+  "intro": "A look inside the Raleigh County Emergency Services Center.",
+  "photos": [
+    {
+      "image": "/images/eoc-building.jpg",
+      "caption": "The Raleigh County Emergency Services building in Beaver",
+      "alt": "A long single-story brick building with a green metal roof."
+    },
+    {
+      "image": "/images/dispatch-console.jpg",
+      "caption": "A telecommunicator console with four monitors",
+      "alt": "A dispatch console with four monitors showing call-taking, dispatch and mapping screens, with the dispatch floor behind it."
+    },
+    {
+      "image": "/images/dispatch-floor.png",
+      "caption": "The dispatch floor",
+      "alt": "Telecommunicators working at consoles in the dispatch room."
+    },
+    {
+      "image": "/images/alarm-room.jpg",
+      "caption": "The alarm monitoring station",
+      "alt": "A desk with three monitors, alarm monitoring equipment and a printer."
+    },
+    {
+      "image": "/images/street-sign-room.jpg",
+      "caption": "Street signs are made in house",
+      "alt": "A desk with a sign cutting machine and a green 911 Boulevard street sign above it."
+    }
+  ]
+}

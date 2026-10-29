@@ -1,0 +1,33 @@
+{
+  "title": "Radio frequencies for Raleigh County",
+  "items": [
+    {
+      "name": "Raleigh County Sheriff's Office",
+      "freq": "155.925"
+    },
+    {
+      "name": "Mutual Aid",
+      "freq": "155.940"
+    },
+    {
+      "name": "EMS Local",
+      "freq": "155.175"
+    },
+    {
+      "name": "County Fire",
+      "freq": "155.955"
+    },
+    {
+      "name": "Beckley City Police Department",
+      "freq": "155.130"
+    },
+    {
+      "name": "Beckley City Fire Department",
+      "freq": "154.400"
+    },
+    {
+      "name": "National Park Service",
+      "freq": "169.775"
+    }
+  ]
+}

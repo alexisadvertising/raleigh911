@@ -8,14 +8,304 @@
           "number": "911"
         },
         {
-          "name": "Non-emergency / EOC",
+          "name": "Non-emergency / Emergency Operations Center",
           "number": "304-255-0911"
         },
         {
-          "name": "Addressing and alarms",
+          "name": "Addressing",
           "number": "304-255-0970"
+        },
+        {
+          "name": "Dispatch",
+          "number": "304-255-9121"
+        }
+      ]
+    },
+    {
+      "name": "Non-Emergencies",
+      "items": [
+        {
+          "name": "Raleigh County Emergency Operations Center",
+          "number": "304-255-0911"
+        },
+        {
+          "name": "Raleigh County Office of Emergency Services",
+          "number": "304-255-0911"
+        },
+        {
+          "name": "American Red Cross, Raleigh County Chapter (disaster preparedness and shelter information)",
+          "number": "304-255-1508"
+        },
+        {
+          "name": "American Red Cross, Raleigh County Chapter (alternate)",
+          "number": "304-255-0102"
+        },
+        {
+          "name": "Salvation Army (Beckley Corps)",
+          "number": "304-253-9541"
+        },
+        {
+          "name": "FEMA Region 3, Philadelphia",
+          "number": "1-215-931-5608"
+        },
+        {
+          "name": "National Flood Insurance Program",
+          "number": "1-800-638-6620"
+        }
+      ]
+    },
+    {
+      "name": "Law Enforcement",
+      "items": [
+        {
+          "name": "W.V. State Police, Beckley",
+          "number": "304-256-6700"
+        },
+        {
+          "name": "W.V. State Police Communications Center",
+          "number": "1-304-746-2158"
+        },
+        {
+          "name": "Raleigh County Sheriff",
+          "number": "304-255-9300"
+        },
+        {
+          "name": "Beckley City Police",
+          "number": "304-256-1721"
+        },
+        {
+          "name": "Mabscott City Police",
+          "number": "304-253-5654"
+        },
+        {
+          "name": "Rhodell City Police",
+          "number": "304-683-3668"
+        },
+        {
+          "name": "Sophia City Police",
+          "number": "304-683-3331"
+        },
+        {
+          "name": "Raleigh County Prosecuting Attorney",
+          "number": "304-255-9148"
+        },
+        {
+          "name": "FBI",
+          "number": "304-253-6874"
+        },
+        {
+          "name": "Bureau of Alcohol, Tobacco and Firearms",
+          "number": "1-304-347-5249"
+        },
+        {
+          "name": "Drug Enforcement Administration",
+          "number": "1-304-347-5209"
+        },
+        {
+          "name": "Dept. of Natural Resources Law Enforcement",
+          "number": "1-800-638-4263"
+        },
+        {
+          "name": "Domestic Violence Hotline",
+          "number": "1-304-428-2333"
+        },
+        {
+          "name": "U.S. Marshal Service",
+          "number": "1-304-623-0486"
+        },
+        {
+          "name": "U.S. Secret Service",
+          "number": "1-304-347-5188"
+        }
+      ]
+    },
+    {
+      "name": "Health",
+      "items": [
+        {
+          "name": "Raleigh County Health Department",
+          "number": "304-252-1531"
+        },
+        {
+          "name": "Raleigh General Hospital (Beckley)",
+          "number": "304-256-4100"
+        },
+        {
+          "name": "Bar-H Hospital (Beckley)",
+          "number": "304-255-3000"
+        },
+        {
+          "name": "Veterans Hospital (Beckley)",
+          "number": "304-255-2121"
+        },
+        {
+          "name": "W.V. Dept. of Health & Human Resources",
+          "number": "304-256-6930"
+        },
+        {
+          "name": "National Response Center (chemical, oil spills and chemical/biological terrorism)",
+          "number": "1-800-424-8802"
+        },
+        {
+          "name": "State Emergency Spill Notification",
+          "number": "1-800-642-3074"
+        },
+        {
+          "name": "Bureau of Public Health",
+          "number": "1-800-558-3920"
+        }
+      ]
+    },
+    {
+      "name": "Fire & Rescue",
+      "items": [
+        {
+          "name": "Best Ambulance Service",
+          "number": "304-252-5522"
+        },
+        {
+          "name": "General Ambulance Service",
+          "number": "304-252-5800"
+        },
+        {
+          "name": "Jan Care Ambulance Service",
+          "number": "304-255-1588"
+        },
+        {
+          "name": "Ghent Ambulance Service",
+          "number": "304-787-5880"
+        },
+        {
+          "name": "Trap Hill Ambulance Service",
+          "number": "304-934-7772"
+        },
+        {
+          "name": "Whitesville Ambulance Service",
+          "number": ""
+        },
+        {
+          "name": "Beckley Fire Dept.",
+          "number": "304-256-1780"
+        },
+        {
+          "name": "Beaver Volunteer Fire Dept.",
+          "number": "304-252-5824"
+        },
+        {
+          "name": "Bradley/Prosperity Volunteer Fire Dept.",
+          "number": "304-877-2307"
+        },
+        {
+          "name": "Clear Creek Volunteer Fire Dept.",
+          "number": "304-877-2669"
+        },
+        {
+          "name": "Coal City Volunteer Fire Dept.",
+          "number": "304-683-3945"
+        },
+        {
+          "name": "Coal River Volunteer Fire Dept.",
+          "number": "304-934-6641"
+        },
+        {
+          "name": "Ghent Volunteer Fire Dept.",
+          "number": "304-787-5880"
+        },
+        {
+          "name": "Lester Volunteer Fire Dept.",
+          "number": "304-934-6622"
+        },
+        {
+          "name": "Mabscott Volunteer Fire Dept.",
+          "number": "304-253-5685"
+        },
+        {
+          "name": "Rhodell Volunteer Fire Dept.",
+          "number": "304-683-3420"
+        },
+        {
+          "name": "Sophia Area Volunteer Fire Dept.",
+          "number": "304-683-3409"
+        },
+        {
+          "name": "Sophia City Volunteer Fire Dept.",
+          "number": "304-683-9802"
+        },
+        {
+          "name": "Trap Hill Volunteer Fire Dept.",
+          "number": "304-934-7772"
+        },
+        {
+          "name": "Whitesville Volunteer Fire Dept.",
+          "number": "304-854-1636"
+        },
+        {
+          "name": "W.V. State Fire Marshals (Arson Hotline)",
+          "number": "1-800-233-3473"
+        }
+      ]
+    },
+    {
+      "name": "Other Important Numbers",
+      "items": [
+        {
+          "name": "American Electric Power",
+          "number": "1-800-982-4237"
+        },
+        {
+          "name": "Allegheny Power",
+          "number": "1-800-255-3443"
+        },
+        {
+          "name": "Raleigh County Commission",
+          "number": "304-255-9146"
+        },
+        {
+          "name": "Raleigh County Assessor",
+          "number": "304-255-9178"
+        },
+        {
+          "name": "Raleigh County Airport",
+          "number": "304-252-0476"
+        },
+        {
+          "name": "City of Beckley",
+          "number": "304-256-1750"
+        },
+        {
+          "name": "City of Lester",
+          "number": "304-934-6301"
+        },
+        {
+          "name": "City of Mabscott",
+          "number": "304-253-5654"
+        },
+        {
+          "name": "City of Rhodell",
+          "number": "304-683-3668"
+        },
+        {
+          "name": "City of Sophia",
+          "number": "304-683-4456"
+        },
+        {
+          "name": "W.V. Abandoned Mine Land",
+          "number": "1-800-648-0274"
+        },
+        {
+          "name": "W.V. Air Quality",
+          "number": "1-304-558-4022"
+        },
+        {
+          "name": "W.V. Dam/Well Emergencies",
+          "number": "1-800-654-3312"
+        },
+        {
+          "name": "W.V. Dam/Well Emergencies (non-coal, oil or gas), pollution and spills, water resources, etc.",
+          "number": "1-800-642-3074"
         }
       ]
     }
-  ]
+  ],
+  "note": "Numbers carried over from the old website. Please verify before relying on them."
 }

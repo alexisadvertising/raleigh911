@@ -1,8 +1,15 @@
 # Settings for Pages CMS (pagescms.org): the editing screen staff use after logging in.
 media:
-  input: src/images
-  output: /images
-  categories: [image]
+  - name: images
+    label: Photos and pictures
+    input: src/images
+    output: /images
+    categories: [image]
+  - name: files
+    label: Documents (PDFs)
+    input: src/files
+    output: /files
+    extensions: [pdf, doc, docx, xls, xlsx]
 content:
   - name: board
     label: Board of Directors (members and meeting dates)
@@ -74,7 +81,7 @@ content:
     path: src/_data/lepc.json
     format: json
     fields:
-      - { name: graphImage, label: "Graph picture", type: image }
+      - { name: graphImage, label: "Graph picture", type: image, options: { media: images } }
       - { name: graphCaption, label: "Caption", type: string }
       - { name: graphAlt, label: "Describe the graph for people who cannot see it", type: text }
   - name: phones
@@ -131,6 +138,7 @@ content:
       - { name: streetSign, label: "Street sign request form link", type: string }
       - { name: tour, label: "Tour request form link", type: string }
       - { name: resource, label: "Resource request form link", type: string }
+      - { name: resourcePdf, label: "Resource request form PDF", type: file, options: { media: files } }
   - name: downloads
     label: Downloads (PDFs)
     type: file
@@ -142,7 +150,7 @@ content:
         list: true
         fields:
           - { name: title, label: "Title", type: string }
-          - { name: file, label: "File", type: file }
+          - { name: file, label: "File (PDF)", type: file, options: { media: files } }
           - { name: note, label: "Note (optional)", type: string }
   - name: about
     label: About the EOC page
@@ -196,3 +204,26 @@ content:
       - { name: lepcEmail, label: "LEPC email", type: string }
       - { name: street, label: "Street address", type: string }
       - { name: city, label: "City, state, ZIP", type: string }
+  - name: gallery
+    label: Photos page
+    type: file
+    path: src/_data/gallery.json
+    format: json
+    fields:
+      - { name: intro, label: "Sentence above the photos (optional)", type: text }
+      - name: photos
+        label: Photos
+        type: object
+        list: true
+        fields:
+          - { name: image, label: "Photo", type: image, options: { media: images } }
+          - { name: caption, label: "Caption (optional)", type: string }
+          - { name: alt, label: "Describe the photo for people who cannot see it", type: string }
+  - name: social
+    label: Facebook page
+    type: file
+    path: src/_data/social.json
+    format: json
+    fields:
+      - { name: facebookUrl, label: "Facebook page web address (leave empty to hide)", type: string }
+      - { name: showFeed, label: "Show recent posts on the home page?", type: boolean }

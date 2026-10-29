@@ -1,4 +1,7 @@
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/files");
@@ -13,5 +16,5 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("maxtotal", stats => Math.max(...stats.years.map((_, i) => stats.series.reduce((a, s) => a + Number(s.values[i]), 0))));
   eleventyConfig.addFilter("head", (a, n) => a.slice(0, n));
   eleventyConfig.addFilter("pct", (v, max) => Math.round((v / max) * 100));
-  return { dir: { input: "src", output: "_site", includes: "_includes", data: "_data" }, markdownTemplateEngine: "njk", htmlTemplateEngine: "njk" };
+  return { pathPrefix: process.env.PATH_PREFIX || "/", dir: { input: "src", output: "_site", includes: "_includes", data: "_data" }, markdownTemplateEngine: "njk", htmlTemplateEngine: "njk" };
 };

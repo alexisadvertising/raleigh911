@@ -8,5 +8,16 @@
   "email": "raleigh911@raleigh911.org",
   "lepcEmail": "lepc@raleighcounty.gov",
   "street": "162 Industrial Park Rd",
-  "city": "Beaver, WV 25813"
+  "city": "Beaver, WV 25813",
+  "nonEmergencyLabel": "For non-emergencies, call",
+  "logo": "/images/logo-white.png",
+  "pageTitleSuffix": "Raleigh County 911 & Emergency Services",
+  "metaDescription": "Official website of the Raleigh County Emergency Services Authority: 911 dispatch, addressing and street signs, alarm monitoring, and emergency management for Beckley and Raleigh County, WV.",
+  "footerLinksTitle": "More",
+  "footerEmergencyTitle": "In an emergency",
+  "footerDialText": "Dial",
+  "footerDialNumber": "911",
+  "footerEmergencyText": "From any phone, any time. Stay on the line and follow the telecommunicator’s instructions.",
+  "facebookText": "Follow us on Facebook",
+  "legalNote": "Established 1982 by House Bill 2108."
 }

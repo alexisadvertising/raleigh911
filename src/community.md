@@ -1,5 +1,13 @@
 ---
 title: Community Involvement
+subtitle: ''
+heroImage: ''
+heroAlt: ''
+form:
+  label: Request a tour
+  url: ''
+  help: To arrange a tour, please call
+  phone: 304-255-0911
 ---
 The Raleigh County Emergency Services is proud of its involvement with the community.
 

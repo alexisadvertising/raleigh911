@@ -1,5 +1,66 @@
 {
-  "graphImage": "/images/hazmat-calls-2025.png",
-  "graphCaption": "HAZ-MAT calls in Raleigh County, 2025, by call type (approximate counts read from the chart).",
-  "graphAlt": "Bar chart of 2025 hazardous-material related calls by type. The highest are structure fire/rekindle at about 113, gas leak about 77, vehicle fire about 75, fire (not vegetation) and odor investigation about 69 each, and motor vehicle accident with fluid leak about 60. Illegal burn is about 42, transformer fire about 26, explosion about 15, sewer problem about 11, and the rest are under 5."
+  "title": "Fire & HazMat Dispatch Activity — 2025",
+  "intro": "During 2025, the Beckley-Raleigh County 911 Center received and coordinated responses to a variety of reported fire-related and hazardous materials incidents throughout Raleigh County. The categories displayed represent the initial nature of the incidents as reported to the communications center at the time the calls were received.\n\nIt is important to note that the initial reported nature of an incident may differ from the circumstances ultimately encountered or determined by responding personnel. Call classifications may change as additional information becomes available and responders investigate the situation.\n\nThis breakdown illustrates the variety of reported incidents for which the center coordinated emergency response resources throughout the year and classified as potential hazardous materials related incidents.",
+  "items": [
+    {
+      "name": "Structure Fire",
+      "count": 162
+    },
+    {
+      "name": "MVA w/Fluids",
+      "count": 136
+    },
+    {
+      "name": "Vehicle Fire",
+      "count": 105
+    },
+    {
+      "name": "Illegal Burn",
+      "count": 101
+    },
+    {
+      "name": "Gas Leak",
+      "count": 70
+    },
+    {
+      "name": "Fire (Specify)",
+      "count": 64
+    },
+    {
+      "name": "Odor Investigation",
+      "count": 57
+    },
+    {
+      "name": "Transformer Fire",
+      "count": 22
+    },
+    {
+      "name": "Rekindle",
+      "count": 19
+    },
+    {
+      "name": "Explosion",
+      "count": 14
+    },
+    {
+      "name": "Sewer Problem",
+      "count": 10
+    },
+    {
+      "name": "Dumpster Fire",
+      "count": 4
+    },
+    {
+      "name": "Arson",
+      "count": 3
+    },
+    {
+      "name": "Hazmat",
+      "count": 3
+    },
+    {
+      "name": "Chemical Leak",
+      "count": 1
+    }
+  ]
 }

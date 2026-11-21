@@ -1,5 +1,28 @@
 {
+  "pageTitle": "Downloads",
+  "pageSubtitle": "Forms, guidelines and public documents.",
+  "emptyText": "Documents will be posted here soon.",
   "items": [
+    {
+      "title": "FOIA Request Form (fillable)",
+      "file": "/files/foia-request-form.pdf",
+      "note": "Records request form. Fill it in, then email it to raleigh911@raleigh911.org"
+    },
+    {
+      "title": "Street Name List",
+      "file": "/files/street-name-list.pdf",
+      "note": "All street names in Raleigh County, 65 pages"
+    },
+    {
+      "title": "Street Sign Guidelines",
+      "file": "/files/street-sign-guidelines.pdf",
+      "note": "Where and how to place a street sign, 2 pages"
+    },
+    {
+      "title": "Street Sign Request Form",
+      "file": "/files/street-sign-request-form.pdf",
+      "note": "Print, fill in and bring or send to the EOC"
+    },
     {
       "title": "Hazardous Materials Annex",
       "file": "/files/hazardous-materials-annex.pdf",

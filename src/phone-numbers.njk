@@ -1,8 +1,9 @@
 ---
 layout: page.njk
 permalink: /phone-numbers/
-title: Important Phone Numbers
-subtitle: In an emergency, dial 911.
+eleventyComputed:
+  title: "{{ phones.pageTitle }}"
+  subtitle: "{{ phones.pageSubtitle }}"
 ---
 <div class="phone-groups">
 {%- for g in phones.groups %}

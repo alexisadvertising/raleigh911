@@ -1,6 +1,4 @@
 {
   "layout": "page.njk",
-  "permalink": "/about/",
-  "heroImage": "/images/eoc-building.jpg",
-  "heroAlt": "The Raleigh County Emergency Services building, a long single-story brick building with a green metal roof."
+  "permalink": "/about/"
 }

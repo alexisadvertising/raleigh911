@@ -1,4 +1,5 @@
 {
+  "pageTitle": "Photos",
   "intro": "A look inside the Raleigh County Emergency Services Center.",
   "photos": [
     {
@@ -25,6 +26,56 @@
       "image": "/images/street-sign-room.jpg",
       "caption": "Street signs are made in house",
       "alt": "A desk with a sign cutting machine and a green 911 Boulevard street sign above it."
+    },
+    {
+      "image": "/images/drews-creek-flooding-june-2026.jpg",
+      "caption": "June 2026: Drews Creek flooding",
+      "alt": "A washed-out and broken roadway beside a green hillside after flooding."
+    },
+    {
+      "image": "/images/coal-city-tunnel-fire-sept-2026.jpg",
+      "caption": "September 2026: Coal City tunnel fire",
+      "alt": "Smoke and flames rising from the opening of a tunnel in a wooded hillside."
+    },
+    {
+      "image": "/images/liberty-bus-wreck-exercise.jpg",
+      "caption": "Liberty High School bus wreck exercise",
+      "alt": "Fire engines and responders at a practice exercise with an overturned bus beside a football field."
+    },
+    {
+      "image": "/images/raleigh-general-mass-casualty-exercise.jpg",
+      "caption": "Raleigh General mass casualty exercise",
+      "alt": "Responders and hospital staff in a hospital hallway with a patient on a stretcher during a practice exercise."
+    },
+    {
+      "image": "/images/raleigh-general-hazmat-exercise.jpg",
+      "caption": "Raleigh General Hospital hazmat exercise",
+      "alt": "Responders in safety vests moving a patient on a stretcher past a decontamination tent at a hospital entrance."
+    },
+    {
+      "image": "/images/mobile-command-uptown-event.jpg",
+      "caption": "Mobile command unit at a Beckley Uptown special event",
+      "alt": "The white Mobile Command Unit vehicle parked in front of brick buildings in uptown Beckley."
+    },
+    {
+      "image": "/images/mobile-command-inside.jpg",
+      "caption": "Inside the mobile command unit during a deployment",
+      "alt": "Staff working at the counters and radios inside the mobile command unit."
+    },
+    {
+      "image": "/images/disaster-supplies-loading.jpg",
+      "caption": "Loading disaster supplies",
+      "alt": "A forklift loading a pallet of bottled water onto a truck, with an Emergency Management vehicle beside it."
+    },
+    {
+      "image": "/images/forklift-training-may-2026.jpg",
+      "caption": "May 2026: forklift training",
+      "alt": "A staff member on a forklift moving a bale of shredded paper in a warehouse bay."
+    },
+    {
+      "image": "/images/staff-addressing-truck.jpg",
+      "caption": "Addressing and mapping vehicle",
+      "alt": "A staff member seated in a white Beckley-Raleigh County Emergency Management truck."
     }
   ]
 }

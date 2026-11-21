@@ -1,4 +1,6 @@
 {
+  "pageTitle": "Important Phone Numbers",
+  "pageSubtitle": "In an emergency, dial 911.",
   "groups": [
     {
       "name": "Raleigh County Emergency Services",
@@ -180,7 +182,8 @@
           "number": "304-934-7772"
         },
         {
-          "name": "Whitesville Ambulance Service"
+          "name": "Whitesville Ambulance Service",
+          "number": ""
         },
         {
           "name": "Beckley Fire Dept.",
@@ -305,5 +308,6 @@
         }
       ]
     }
-  ]
+  ],
+  "note": "Numbers carried over from the old website. Please verify before relying on them."
 }

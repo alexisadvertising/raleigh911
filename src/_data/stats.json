@@ -1,5 +1,12 @@
 {
-  "title": "Dispatches by year",
+  "pageTitle": "Dispatch Statistics",
+  "pageSubtitle": "Number of dispatches by year",
+  "openingHeading": "Increasing emergency communications demand",
+  "totalHeading": "Total dispatches by year",
+  "agencyHeading": "Dispatches by agency",
+  "typeHeading": "By type of dispatch, all years",
+  "intro": "The Beckley-Raleigh County 911 Center recorded 114,146 dispatches in 2025; an increase of 22,365 dispatches (24.4%) compared to 2024. This represents a substantial increase in emergency communications activity and highlights the growing demands placed on our telecommunicators and emergency response partners.",
+  "agencyIntro": "The chart illustrates the distribution of dispatch activity among the agencies served by the Beckley-Raleigh County 911 Center. Law enforcement accounted for the largest volume of dispatches in both years, followed by emergency medical services, fire departments, and wrecker services. The comparison highlights changes in service demands across the agencies and demonstrates the center's role in coordinating emergency and support services throughout Raleigh County.",
   "years": [
     2018,
     2019,
@@ -9,6 +16,16 @@
     2023,
     2024,
     2025
+  ],
+  "totals": [
+    90799,
+    88704,
+    92667,
+    85412,
+    88379,
+    100097,
+    91781,
+    114146
   ],
   "series": [
     {
@@ -21,7 +38,7 @@
         60842,
         70949,
         63144,
-        83397
+        86773
       ]
     },
     {
@@ -60,7 +77,7 @@
         3618,
         3689,
         3552,
-        2654
+        3654
       ]
     }
   ]

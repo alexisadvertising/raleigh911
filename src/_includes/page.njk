@@ -6,14 +6,13 @@ layout: base.njk
   {% if subtitle %}<p class="page-sub">{{ subtitle }}</p>{% endif %}
 </div></div>
 <div class="wrap page-body">
-  {% if heroImage %}<figure class="page-figure"><img src="{{ heroImage }}" alt="{{ heroAlt }}" width="1400" height="932"></figure>{% endif %}
+  {% if heroImage %}<figure class="page-figure"><img src="{{ heroImage }}" alt="{{ heroAlt }}"></figure>{% endif %}
   <div class="prose">
     {{ content | safe }}
-    {% if formKey %}
-      {% set url = forms[formKey] %}
+    {% if form and (form.url or form.help) %}
       <p class="form-cta">
-        {% if url %}<a class="btn btn-solid" href="{{ url }}">{{ formLabel }}</a>
-        {% else %}To {{ formHelp or 'make this request' }}, please call <a href="tel:{{ site.addressingPhone | tel }}">{{ site.addressingPhone }}</a>.{% endif %}
+        {% if form.url %}<a class="btn btn-solid" href="{{ form.url }}">{{ form.label or "Open the form" }}</a>
+        {% else %}{{ form.help }} <a href="tel:{{ (form.phone or site.nonEmergency) | tel }}">{{ form.phone or site.nonEmergency }}</a>.{% endif %}
       </p>
     {% endif %}
   </div>

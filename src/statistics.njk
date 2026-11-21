@@ -1,10 +1,14 @@
 ---
 layout: page.njk
 permalink: /statistics/
-title: Dispatch Statistics
-subtitle: Number of dispatches by year
+eleventyComputed:
+  title: "{{ stats.pageTitle }}"
+  subtitle: "{{ stats.pageSubtitle }}"
 ---
-<h2>Total dispatches by year</h2>
+<h2>{{ stats.openingHeading }}</h2>
+{% if stats.intro %}<p class="stat-lead">{{ stats.intro }}</p>{% endif %}
+
+<h2>{{ stats.totalHeading }}</h2>
 {% set mx = stats | maxtotal %}
 <div class="bars" role="img" aria-label="Bar chart of total dispatches per year. The full numbers are in the tables below.">
 {%- for y in stats.years %}
@@ -13,7 +17,22 @@ subtitle: Number of dispatches by year
 {%- endfor %}
 </div>
 
-<h2>By type of dispatch</h2>
+{% set last = stats.years.length - 1 %}
+{% set prev = last - 1 %}
+{% set amx = 0 %}
+{%- for s in stats.series %}{% if s.values[last] > amx %}{% set amx = s.values[last] %}{% endif %}{% if s.values[prev] > amx %}{% set amx = s.values[prev] %}{% endif %}{%- endfor %}
+<h2>{{ stats.agencyHeading }}, {{ stats.years[prev] }}–{{ stats.years[last] }}</h2>
+{% if stats.agencyIntro %}<p>{{ stats.agencyIntro }}</p>{% endif %}
+<p class="chart-key"><span><i class="is-prior"></i>{{ stats.years[prev] }}</span><span><i></i>{{ stats.years[last] }}</span></p>
+<div class="bars bars-agency" role="img" aria-label="Bar chart comparing {{ stats.years[prev] }} and {{ stats.years[last] }} dispatches for each agency type. The full numbers are in the table below.">
+{%- for s in stats.series %}
+  <div class="agency-name">{{ s.name }}</div>
+  <div class="bar-row"><span>{{ stats.years[prev] }}</span><span class="bar-track"><span class="bar-fill is-prior" style="display:block;width:{{ s.values[prev] | pct(amx) }}%"></span></span><span>{{ s.values[prev] | num }}</span></div>
+  <div class="bar-row"><span>{{ stats.years[last] }}</span><span class="bar-track"><span class="bar-fill" style="display:block;width:{{ s.values[last] | pct(amx) }}%"></span></span><span>{{ s.values[last] | num }}</span></div>
+{%- endfor %}
+</div>
+
+<h2>{{ stats.typeHeading }}</h2>
 <div class="table-wrap">
 <table class="data">
   <thead><tr><th scope="col">Year</th>{% for s in stats.series %}<th scope="col" class="n">{{ s.name }}</th>{% endfor %}</tr></thead>

@@ -1,22 +1,27 @@
 ---
 layout: page.njk
 permalink: /contact/
-title: Contact Us
+eleventyComputed:
+  title: "{{ staff.pageTitle }}"
+  subtitle: "{{ staff.pageSubtitle }}"
 ---
-<h2>Raleigh County Emergency Services Authority</h2>
+<h2>{{ staff.contactHeading }}</h2>
 <address>{{ site.street }}<br>{{ site.city }}</address>
-<p>Non-emergency / EOC: <a href="tel:{{ site.nonEmergency | tel }}">{{ site.nonEmergency }}</a><br>
-Addressing and alarms: <a href="tel:{{ site.addressingPhone | tel }}">{{ site.addressingPhone }}</a><br>
-General questions or comments: <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
-LEPC: <a href="mailto:{{ site.lepcEmail }}">{{ site.lepcEmail }}</a></p>
+<p>
+{%- for l in staff.lines %}
+{{ l.label }}: {% if l.kind == "phone" %}<a href="tel:{{ l.value | tel }}">{{ l.value }}</a>{% elif l.kind == "email" %}<a href="mailto:{{ l.value }}">{{ l.value }}</a>{% else %}{{ l.value }}{% endif %}{% if not loop.last %}<br>{% endif %}
+{%- endfor %}
+</p>
 
-<h2>Staff</h2>
+{% if staff.people | selectattr("show") | length %}
+<h2>{{ staff.staffHeading }}</h2>
 <ul class="contact-grid plain-list">
 {%- for p in staff.people %}{% if p.show %}
   <li class="contact-card"><strong>{{ p.name }}</strong><br>{{ p.role }}</li>
 {%- endif %}{% endfor %}
 </ul>
+{% endif %}
 
-<h2 id="directions">Directions to the Raleigh County 911 Center</h2>
-<p class="prose">From I-64 eastbound, take EXIT 125B onto AIRPORT RD. Continue straight on Airport Rd until the entrance of the Raleigh County Memorial Airport and turn RIGHT onto INDUSTRIAL PARK RD. Turn the SECOND RIGHT into the Raleigh County Emergency Operations Center / 911 facility.</p>
-<address>Raleigh County Emergency Services<br>{{ site.street }}<br>{{ site.city }}</address>
+<h2 id="directions">{{ staff.directionsHeading }}</h2>
+<p class="prose">{{ staff.directionsText }}</p>
+<address>{{ staff.directionsPlace }}<br>{{ site.street }}<br>{{ site.city }}</address>

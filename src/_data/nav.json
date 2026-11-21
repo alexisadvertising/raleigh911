@@ -1,0 +1,78 @@
+{
+  "menu": [
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "About the EOC",
+      "url": "/about/"
+    },
+    {
+      "label": "Addressing & Signs",
+      "url": "/addressing/"
+    },
+    {
+      "label": "Dispatch",
+      "url": "/telecommunicators/"
+    },
+    {
+      "label": "LEPC",
+      "url": "/lepc/"
+    },
+    {
+      "label": "Board of Directors",
+      "url": "/board/"
+    },
+    {
+      "label": "Community",
+      "url": "/community/"
+    },
+    {
+      "label": "Photos",
+      "url": "/photos/"
+    },
+    {
+      "label": "Statistics",
+      "url": "/statistics/"
+    },
+    {
+      "label": "Public Records (FOIA)",
+      "url": "/foia/"
+    },
+    {
+      "label": "Phone Numbers",
+      "url": "/phone-numbers/"
+    },
+    {
+      "label": "Links",
+      "url": "/links/"
+    },
+    {
+      "label": "Downloads",
+      "url": "/downloads/"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact/"
+    }
+  ],
+  "footer": [
+    {
+      "label": "Downloads",
+      "url": "/downloads/"
+    },
+    {
+      "label": "Public Records (FOIA)",
+      "url": "/foia/"
+    },
+    {
+      "label": "Links",
+      "url": "/links/"
+    },
+    {
+      "label": "Terms of use & site policy",
+      "url": "/terms/"
+    }
+  ]
+}

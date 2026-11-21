@@ -1,7 +1,9 @@
 ---
 layout: page.njk
 permalink: /photos/
-title: Photos
+eleventyComputed:
+  title: "{{ gallery.pageTitle }}"
+  subtitle: "{{ gallery.pageSubtitle }}"
 ---
 {% if gallery.intro %}<p class="prose">{{ gallery.intro }}</p>{% endif %}
 {% if gallery.photos.length %}

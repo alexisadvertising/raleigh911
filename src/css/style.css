@@ -446,3 +446,18 @@ table.data td.n, table.data th.n { text-align: right; font-variant-numeric: tabu
 .phone-group h2 { margin-top: .2rem; }
 .prose .phone-group, .prose .phone-groups { padding-left: 0; }
 .prose:has(.photo-grid), .prose:has(.phone-groups) { max-width: none; }
+
+/* Chart labels, screen-reader text */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.bars-wide .bar-row { grid-template-columns: 10rem 1fr 3.5rem; }
+.bars-wide .bar-row span:first-child { font-size: .95rem; }
+.bars-agency .bar-row { grid-template-columns: 10rem 1fr 5rem; margin-bottom: .25rem; }
+.bars-agency .agency-name { font-weight: 700; margin: .9rem 0 .25rem; }
+.bars-agency .bar-fill.is-prior { background: #8fa3cc; }
+.bars-agency .bar-row span:first-child { color: var(--ink-soft); }
+.chart-key { display: flex; gap: 1.2rem; font-size: .9rem; margin: 0 0 .5rem; }
+.chart-key i { display: inline-block; width: .8rem; height: .8rem; border-radius: 2px; margin-right: .35rem; vertical-align: -1px; background: var(--green-700); }
+.chart-key i.is-prior { background: #8fa3cc; }
+.bars-wide, .bars-agency { max-width: 46rem; }
+@media (max-width: 40rem) { .bars-wide .bar-row, .bars-agency .bar-row { grid-template-columns: 6.5rem 1fr 3.6rem; gap: .5rem; } .bars-agency .bar-row { grid-template-columns: 3rem 1fr 4.4rem; } }
+.stat-lead { font-size: 1.15rem; }

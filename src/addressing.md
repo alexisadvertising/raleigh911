@@ -1,56 +1,44 @@
 ---
 title: Addressing, Street Signs & Alarm Monitoring
+subtitle: ''
+heroImage: ''
+heroAlt: ''
+form:
+  label: ''
+  url: ''
+  help: ''
+  phone: ''
 ---
-## What is the Addressing Department?
+## Addressing
 
-The Addressing Department is responsible for mapping and numbering each residential and business building in the Raleigh County area. Included in the Addressing Department is the Street Signs Department. Trained Security / Data Entry personnel work around the clock maintaining databases of streets and addresses. Street signs and county addressing give law enforcement, fire and EMS agencies response directions and help speed response time in an emergency.
+![A desk with two large monitors showing aerial photos and street maps of Raleigh County.](/images/addressing-mapping-desk.jpg)
 
-![A desk with a sign cutting machine and a green 911 Boulevard street sign above it.](/images/street-sign-room.jpg)
+### What do we do?
 
-<h2 id="alarms">What is the alarm service?</h2>
+The Addressing Department maps and assigns an address to every home and business in Raleigh County. Having an address on every building is essential, because it helps emergency crews find you quickly.
 
-The Raleigh County EOC monitors digital security system alarms 24 hours a day. Alarms include burglar, panic, fire and even medical. When an alarm is activated, trained Security / Data Entry personnel have a direct line to the 911 telecommunicators, allowing for a fast and reliable reaction to an alarm. The monitoring service is available to Raleigh County residents for a minimal fee. Call [304-255-0970](tel:+13042550970) to learn more.
+Need a new address? Not sure what your address is? Have a question about your address? We're happy to help. Call us at **[(304) 255-0970](tel:+13042550970)**. Our office is open Monday through Friday, 8 am – 6 pm. Or email us at **[mapping@raleigh911.org](mailto:mapping@raleigh911.org)**.
 
-![A desk with three monitors, alarm monitoring equipment and a printer.](/images/alarm-room.jpg)
+## Street Signs
 
-## List of street names
+![A sign-making table with a blue cutting mat and a large sign cutter behind it.](/images/street-sign-equipment.jpg)
 
-A list of street names in Raleigh County is available in our [downloads section](/downloads/).
+Our Street Sign Department is part of the Addressing Department. Clear street signs and accurate county addresses tell police, fire, and EMS crews where to go, which helps them reach you faster in an emergency.
 
-## Request a street sign
+If a street sign in Raleigh County is missing or hard to read, the Raleigh County Emergency Services Authority will replace it at no cost to you. Before you request a sign, please take a look at the street sign guidelines.
 
-The street signs in Raleigh County are provided as a free service by the Raleigh County Emergency Services Authority. Street signs are not made for any other county by the Raleigh County EOC. Before requesting a street sign, please review the [street sign guidelines](#guidelines) below.
+**Important:** The person requesting the sign is responsible for picking it up and installing it. We will provide all the materials needed.
 
-The EOC will call the requester when a sign is complete. The requester is responsible for picking up the sign and placing it as described in the guidelines. For directions to the Raleigh County Emergency Services building, see the [Contact page](/contact/#directions).
+- [Full list of street names](/files/street-name-list.pdf) (PDF)
+- [Street sign guidelines](/files/street-sign-guidelines.pdf) (PDF)
+- [Request a new street sign](/files/street-sign-request-form.pdf) (printable PDF form)
 
-<h2 id="guidelines">Street sign guidelines</h2>
+For directions to the Raleigh County Emergency Services building, see the [Contact page](/contact/#directions).
 
-1. The county is not competing with the D.O.H. in placing street signs. We DO NOT want to put up signs where D.O.H. will put them up. If there is no sign up on a major D.O.H. road, please inform the EOC and we will request D.O.H. to place a sign up (in writing).
-2. When your agency or club goes out to ID your area for street signs:
-    - (a) State if both sides of the sign need the street name.
-    - (b) If more than one sign is needed for a street, please indicate.
-    - (c) State if a cross street sign is needed. We do not want to put cross street signs up unless really needed.
-3. The EOC will maintain a list of all signs made: date, sign, place and what area, and who put the sign up.
+## Alarm Monitoring
 
-### Placing signs
+![An alarm monitoring desk with three monitors, a telephone and a keyboard.](/images/alarm-monitoring-station.jpg)
 
-- Standardization of sign position cannot always be attained.
-- Always use common sense in placing signs:
-    - (a) Watch for water, gas and other utilities.
-    - (b) If placed on private property, get permission.
-    - (c) When driving a 4 ft. post into the ground, please keep the post level.
-    - (d) Signs must be 15 ft. away from a hydrant.
+The Raleigh County EOC watches over digital security, fire, panic, and medical alarms 24 hours a day. When an alarm goes off, our trained Security/Data Entry team has a direct line to 911 dispatchers, so help can be on its way fast.
 
-Use the following as a general guide.
-
-**Height.** Signs erected at the side of the road in rural districts should be mounted at a height of at least 5 feet, measured from the bottom of the sign to the near edge of the pavement. In business, commercial and residential districts where parking and / or pedestrian movement is likely to occur, or where there are other obstructions to view, the clearance to the bottom of the sign shall be at least 7 feet. The height to the bottom of a secondary sign mounted below another sign may be 1 foot less than the appropriate height specified above.
-
-**Lateral clearance.** Signs should have the maximum practical lateral clearance from the edge of the traveled way for the safety of motorists who may leave the roadway and strike the sign supports. Advantage should be taken of existing guardrail, overcrossing structures and other conditions to minimize the exposure of sign supports to traffic. Otherwise, breakaway or yielding supports should be used.
-
-Normally, signs should not be closer than 6 feet from the edge of the shoulder, or if none, 12 feet from the edge of the traveled way. In urban areas a lesser clearance may be used where necessary. Although 2 feet is recommended as the working urban minimum, a clearance of 1 foot from the curb face is permissible where sidewalk width is limited or where existing poles are close to the curb.
-
-**Posts and mountings.** Sign posts and their foundations and sign mountings shall be so constructed as to hold signs in a proper and permanent position, to resist swaying in the wind or displacement by vandalism.
-
-In areas where ground mounted sign supports cannot be sufficiently offset from the pavement edge, sign supports should be of a suitable breakaway or yielding design. Concrete bases for sign supports should be flush with the ground level.
-
-In some cases, especially in urban districts, signs can be correctly placed on existing supports used for other purposes, such as traffic signals, street lights, and public utility poles where permitted, thereby saving expense and minimizing sidewalk obstructions.
+This service is available to Raleigh County residents for a minimal yearly fee. To learn more, call us at **[(304) 255-0970](tel:+13042550970)**, Monday through Friday, 8 am – 6 pm.

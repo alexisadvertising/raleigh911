@@ -2,7 +2,20 @@
 layout: page.njk
 ---
 {{ content | safe }}
-{% if lepc.graphImage %}
-<h2>HAZ-MAT statistics</h2>
-<figure class="page-figure"><img src="{{ lepc.graphImage }}" alt="{{ lepc.graphAlt or lepc.graphCaption }}"><figcaption>{{ lepc.graphCaption }}</figcaption></figure>
+{% if lepc.items.length %}
+<h2>{{ lepc.title }}</h2>
+{% for para in lepc.intro | split2 %}<p>{{ para }}</p>{% endfor %}
+{% set mx = lepc.items | maxcount %}
+<div class="bars bars-wide" role="img" aria-label="Bar chart of 2025 fire and hazardous materials related calls by initial call type. The full numbers are listed in the table below.">
+{%- for it in lepc.items %}
+  <div class="bar-row"><span>{{ it.name }}</span><span class="bar-track"><span class="bar-fill" style="display:block;width:{{ it.count | pct(mx) }}%"></span></span><span>{{ it.count | num }}</span></div>
+{%- endfor %}
+</div>
+<div class="table-wrap">
+<table class="data">
+  <caption class="sr-only">2025 fire and hazardous materials related calls by initial call type</caption>
+  <thead><tr><th scope="col">Initial call type</th><th scope="col" class="n">Calls</th></tr></thead>
+  <tbody>{%- for it in lepc.items %}<tr><th scope="row">{{ it.name }}</th><td class="n">{{ it.count | num }}</td></tr>{%- endfor %}</tbody>
+</table>
+</div>
 {% endif %}

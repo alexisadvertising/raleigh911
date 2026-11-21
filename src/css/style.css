@@ -436,7 +436,7 @@ table.data td.n, table.data th.n { text-align: right; font-variant-numeric: tabu
 .btn-outline { background: transparent; color: var(--green-900); border-color: var(--green-900); }
 .btn-outline:hover { background: #e6ecf8; color: var(--green-900); }
 .prose .btn + .btn { margin-left: .5rem; }
-.prose img { border-radius: var(--radius); border: 1px solid var(--line); margin: 1.25rem 0; width: 100%; max-height: 28rem; object-fit: cover; }
+.prose img { border-radius: var(--radius); border: 1px solid var(--line); margin: 1.25rem 0; width: 100%; max-height: 34rem; object-fit: contain; background: #e8ecf4; }
 .phone-groups { grid-template-columns: 1fr; align-items: start; }
 @media (min-width: 56rem) { .phone-groups { grid-template-columns: repeat(2, 1fr); } }
 .phone-group dd { text-align: right; }

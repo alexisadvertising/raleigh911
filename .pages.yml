@@ -1,244 +1,954 @@
-# Settings for Pages CMS (pagescms.org): the editing screen staff use after logging in.
+# Settings for Pages CMS (pagescms.org): the editing screens staff use after logging in.
 media:
-  - name: images
-    label: Photos and pictures
-    input: src/images
-    output: /images
-    categories: [image]
-  - name: files
-    label: Documents (PDFs)
-    input: src/files
-    output: /files
-    extensions: [pdf, doc, docx, xls, xlsx]
+- name: images
+  label: Photos and pictures
+  input: src/images
+  output: /images
+  categories:
+  - image
+- name: files
+  label: Documents (PDFs)
+  input: src/files
+  output: /files
+  extensions:
+  - pdf
+  - doc
+  - docx
+  - xls
+  - xlsx
 content:
-  - name: board
-    label: Board of Directors (members and meeting dates)
-    type: file
-    path: src/_data/board.json
-    format: json
+- name: home_letter
+  label: 'HOME PAGE: Letter from the director'
+  type: file
+  path: src/index.md
+  format: yaml-frontmatter
+  fields:
+  - name: body
+    label: Director's letter
+    type: rich-text
+- name: home
+  label: 'HOME PAGE: Headline, buttons, picture, sections and side boxes'
+  type: file
+  path: src/_data/home.json
+  format: json
+  fields:
+  - name: hero
+    label: Top of the page
+    type: object
     fields:
-      - { name: year, label: "Meeting schedule year", type: number }
-      - name: members
-        label: Board members
-        type: object
-        list: true
-        fields:
-          - { name: name, label: "Name", type: string }
-          - { name: role, label: "Role (President, Member...)", type: string }
-      - name: meetings
-        label: Meeting dates
-        type: object
-        list: true
-        fields:
-          - { name: date, label: "Date", type: date }
-          - { name: note, label: "Note (optional, like \"Annual meeting\")", type: string }
-      - { name: time, label: "Start time", type: string }
-      - { name: place, label: "Place", type: string }
-      - { name: extraNote, label: "Extra sentence", type: string }
-  - name: notice
-    label: Home page notice (top of the home page)
-    type: file
-    path: src/_data/notice.json
-    format: json
+    - name: title
+      label: Big headline
+      type: string
+    - name: lead
+      label: Intro under the headline
+      type: text
+    - name: image
+      label: Picture on the right (leave empty for no picture)
+      type: image
+      options:
+        media: images
+    - name: imageAlt
+      label: Describe the picture for people who cannot see it
+      type: string
+    - name: buttons
+      label: Buttons under the intro (first one is the bright button)
+      type: object
+      fields:
+      - name: label
+        label: Button words
+        type: string
+      - name: url
+        label: Where it goes (like /addressing/)
+        type: string
+      list: true
+  - name: letterHeading
+    label: Heading above the director's letter
+    type: string
+  - name: services
+    label: What we do section
+    type: object
     fields:
-      - { name: show, label: "Show this notice?", type: boolean }
-      - { name: title, label: "Title", type: string }
-      - { name: text, label: "Message", type: text }
-  - name: home
-    label: Home page
-    type: file
-    path: src/index.md
-    format: yaml-frontmatter
+    - name: heading
+      label: Heading
+      type: string
+    - name: text
+      label: Paragraph
+      type: text
+    - name: cards
+      label: Cards (the boxes under What we do)
+      type: object
+      fields:
+      - name: title
+        label: Card title
+        type: string
+      - name: text
+        label: Card text
+        type: text
+      - name: link
+        label: Where the link goes (a page address like /addressing/ or a full web address)
+        type: string
+      - name: linkText
+        label: Link words
+        type: string
+      list: true
+  - name: glance
+    label: At a glance numbers
+    type: object
     fields:
-      - { name: heroTitle, label: "Big headline", type: string }
-      - { name: heroLead, label: "Intro under the headline", type: text }
-      - { name: whatWeDo, label: "What we do paragraph", type: text }
-      - name: glance
-        label: At-a-glance numbers
-        type: object
-        list: true
-        fields:
-          - { name: label, label: "Label", type: string }
-          - { name: value, label: "Number", type: string }
-      - { name: body, label: "Director's letter", type: rich-text }
-  - name: stats
-    label: Statistics (dispatches by year)
-    type: file
-    path: src/_data/stats.json
-    format: json
+    - name: heading
+      label: Heading
+      type: string
+    - name: items
+      label: Numbers
+      type: object
+      fields:
+      - name: label
+        label: Label
+        type: string
+      - name: value
+        label: Number or words
+        type: string
+      list: true
+    - name: linkText
+      label: Link words under the numbers
+      type: string
+    - name: linkUrl
+      label: Where that link goes (empty to hide it)
+      type: string
+  - name: resource
+    label: Resource request section
+    type: object
     fields:
-      - { name: years, label: "Years (one per box, in order)", type: number, list: true }
-      - name: series
-        label: Dispatch types
-        type: object
-        list: true
-        fields:
-          - { name: name, label: "Type (Law enforcement, Fire...)", type: string }
-          - { name: values, label: "Counts (same order as the years)", type: number, list: true }
-  - name: lepc_graph
-    label: LEPC graph picture
-    type: file
-    path: src/_data/lepc.json
-    format: json
+    - name: show
+      label: Show this section?
+      type: boolean
+    - name: heading
+      label: Heading
+      type: string
+    - name: text
+      label: Paragraph
+      type: text
+    - name: formUrl
+      label: Online form link (optional)
+      type: string
+    - name: formLabel
+      label: Online form button words
+      type: string
+    - name: pdf
+      label: PDF form (optional)
+      type: file
+      options:
+        media: files
+    - name: pdfLabel
+      label: PDF button words
+      type: string
+  - name: sidebar
+    label: Boxes on the right side
+    type: object
     fields:
-      - { name: graphImage, label: "Graph picture", type: image, options: { media: images } }
-      - { name: graphCaption, label: "Caption", type: string }
-      - { name: graphAlt, label: "Describe the graph for people who cannot see it", type: text }
-  - name: phones
-    label: Phone numbers
-    type: file
-    path: src/_data/phones.json
-    format: json
+    - name: phonesHeading
+      label: Phone box heading
+      type: string
+    - name: numbers
+      label: Numbers in the phone box
+      type: object
+      fields:
+      - name: label
+        label: Label
+        type: string
+      - name: number
+        label: Phone number
+        type: string
+      list: true
+    - name: phonesLinkText
+      label: Link words under the phone box
+      type: string
+    - name: boardHeading
+      label: Board meetings box heading
+      type: string
+    - name: boardLinkText
+      label: Board meetings link words
+      type: string
+    - name: visitHeading
+      label: Visit or write box heading
+      type: string
+    - name: directionsLinkText
+      label: Directions link words
+      type: string
+    - name: facebookHeading
+      label: Facebook box heading
+      type: string
+    - name: facebookLinkText
+      label: Facebook link words
+      type: string
+    - name: linksHeading
+      label: Helpful links box heading
+      type: string
+    - name: linksLinkText
+      label: Helpful links link words
+      type: string
+- name: notice
+  label: 'HOME PAGE: Public notice (red/yellow banner)'
+  type: file
+  path: src/_data/notice.json
+  format: json
+  fields:
+  - name: show
+    label: Show this notice?
+    type: boolean
+  - name: title
+    label: Title
+    type: string
+  - name: text
+    label: Message
+    type: text
+- name: about
+  label: 'PAGE: About the EOC'
+  type: file
+  path: src/about.md
+  format: yaml-frontmatter
+  fields:
+  - name: title
+    label: Page title (big heading at the top)
+    type: string
+  - name: subtitle
+    label: Short line under the title (optional)
+    type: string
+  - name: heroImage
+    label: Big picture at the top of the page (optional)
+    type: image
+    options:
+      media: images
+  - name: heroAlt
+    label: Describe that picture for people who cannot see it
+    type: string
+  - name: form
+    label: Form button (optional)
+    type: object
     fields:
-      - name: groups
-        label: Groups (Law Enforcement, Fire, Health...)
-        type: object
-        list: true
-        fields:
-          - { name: name, label: "Group name", type: string }
-          - name: items
-            label: Numbers
-            type: object
-            list: true
-            fields:
-              - { name: name, label: "Name", type: string }
-              - { name: number, label: "Phone number", type: string }
-      - { name: note, label: "Note under the phone numbers (leave empty to hide)", type: text }
-  - name: staff
-    label: Contact page staff list
-    type: file
-    path: src/_data/staff.json
-    format: json
+    - name: label
+      label: Button text, like Request a tour
+      type: string
+    - name: url
+      label: Link to the online form (paste the Google Forms link). Leave empty to show the call message instead.
+      type: string
+    - name: help
+      label: Message shown when there is no form link yet, like To arrange a tour, please call
+      type: string
+    - name: phone
+      label: Phone number shown after that message (leave empty to use the main phone number)
+      type: string
+  - name: body
+    label: Page text (edit like a normal document; use the picture button to add or swap photos)
+    type: rich-text
+- name: addressing
+  label: 'PAGE: Addressing, street signs and alarm monitoring'
+  type: file
+  path: src/addressing.md
+  format: yaml-frontmatter
+  fields:
+  - name: title
+    label: Page title (big heading at the top)
+    type: string
+  - name: subtitle
+    label: Short line under the title (optional)
+    type: string
+  - name: heroImage
+    label: Big picture at the top of the page (optional)
+    type: image
+    options:
+      media: images
+  - name: heroAlt
+    label: Describe that picture for people who cannot see it
+    type: string
+  - name: form
+    label: Form button (optional)
+    type: object
     fields:
-      - name: people
-        label: People
-        type: object
-        list: true
-        fields:
-          - { name: name, label: "Name", type: string }
-          - { name: role, label: "Job title", type: string }
-          - { name: show, label: "Show on the site?", type: boolean }
+    - name: label
+      label: Button text, like Request a tour
+      type: string
+    - name: url
+      label: Link to the online form (paste the Google Forms link). Leave empty to show the call message instead.
+      type: string
+    - name: help
+      label: Message shown when there is no form link yet, like To arrange a tour, please call
+      type: string
+    - name: phone
+      label: Phone number shown after that message (leave empty to use the main phone number)
+      type: string
+  - name: body
+    label: Page text (edit like a normal document; use the picture button to add or swap photos)
+    type: rich-text
+- name: telecommunicators
+  label: 'PAGE: Dispatch (Behind the Call)'
+  type: file
+  path: src/telecommunicators.md
+  format: yaml-frontmatter
+  fields:
+  - name: title
+    label: Page title (big heading at the top)
+    type: string
+  - name: subtitle
+    label: Short line under the title (optional)
+    type: string
+  - name: heroImage
+    label: Big picture at the top of the page (optional)
+    type: image
+    options:
+      media: images
+  - name: heroAlt
+    label: Describe that picture for people who cannot see it
+    type: string
+  - name: form
+    label: Form button (optional)
+    type: object
+    fields:
+    - name: label
+      label: Button text, like Request a tour
+      type: string
+    - name: url
+      label: Link to the online form (paste the Google Forms link). Leave empty to show the call message instead.
+      type: string
+    - name: help
+      label: Message shown when there is no form link yet, like To arrange a tour, please call
+      type: string
+    - name: phone
+      label: Phone number shown after that message (leave empty to use the main phone number)
+      type: string
+  - name: body
+    label: Page text (edit like a normal document; use the picture button to add or swap photos)
+    type: rich-text
+- name: lepc
+  label: 'PAGE: LEPC (text)'
+  type: file
+  path: src/lepc.md
+  format: yaml-frontmatter
+  fields:
+  - name: title
+    label: Page title (big heading at the top)
+    type: string
+  - name: subtitle
+    label: Short line under the title (optional)
+    type: string
+  - name: heroImage
+    label: Big picture at the top of the page (optional)
+    type: image
+    options:
+      media: images
+  - name: heroAlt
+    label: Describe that picture for people who cannot see it
+    type: string
+  - name: form
+    label: Form button (optional)
+    type: object
+    fields:
+    - name: label
+      label: Button text, like Request a tour
+      type: string
+    - name: url
+      label: Link to the online form (paste the Google Forms link). Leave empty to show the call message instead.
+      type: string
+    - name: help
+      label: Message shown when there is no form link yet, like To arrange a tour, please call
+      type: string
+    - name: phone
+      label: Phone number shown after that message (leave empty to use the main phone number)
+      type: string
+  - name: body
+    label: Page text (edit like a normal document; use the picture button to add or swap photos)
+    type: rich-text
+- name: lepc_chart
+  label: 'PAGE: LEPC fire and HazMat chart'
+  type: file
+  path: src/_data/lepc.json
+  format: json
+  fields:
+  - name: title
+    label: Heading above the chart
+    type: string
+  - name: intro
+    label: Paragraphs above the chart (leave a blank line between paragraphs)
+    type: text
+  - name: items
+    label: Call types and counts (the chart draws itself)
+    type: object
+    fields:
+    - name: name
+      label: Call type
+      type: string
+    - name: count
+      label: Number of calls
+      type: number
+    list: true
+- name: community
+  label: 'PAGE: Community involvement'
+  type: file
+  path: src/community.md
+  format: yaml-frontmatter
+  fields:
+  - name: title
+    label: Page title (big heading at the top)
+    type: string
+  - name: subtitle
+    label: Short line under the title (optional)
+    type: string
+  - name: heroImage
+    label: Big picture at the top of the page (optional)
+    type: image
+    options:
+      media: images
+  - name: heroAlt
+    label: Describe that picture for people who cannot see it
+    type: string
+  - name: form
+    label: Form button (optional)
+    type: object
+    fields:
+    - name: label
+      label: Button text, like Request a tour
+      type: string
+    - name: url
+      label: Link to the online form (paste the Google Forms link). Leave empty to show the call message instead.
+      type: string
+    - name: help
+      label: Message shown when there is no form link yet, like To arrange a tour, please call
+      type: string
+    - name: phone
+      label: Phone number shown after that message (leave empty to use the main phone number)
+      type: string
+  - name: body
+    label: Page text (edit like a normal document; use the picture button to add or swap photos)
+    type: rich-text
+- name: foia
+  label: 'PAGE: Public records (FOIA)'
+  type: file
+  path: src/foia.md
+  format: yaml-frontmatter
+  fields:
+  - name: title
+    label: Page title (big heading at the top)
+    type: string
+  - name: subtitle
+    label: Short line under the title (optional)
+    type: string
+  - name: heroImage
+    label: Big picture at the top of the page (optional)
+    type: image
+    options:
+      media: images
+  - name: heroAlt
+    label: Describe that picture for people who cannot see it
+    type: string
+  - name: form
+    label: Form button (optional)
+    type: object
+    fields:
+    - name: label
+      label: Button text, like Request a tour
+      type: string
+    - name: url
+      label: Link to the online form (paste the Google Forms link). Leave empty to show the call message instead.
+      type: string
+    - name: help
+      label: Message shown when there is no form link yet, like To arrange a tour, please call
+      type: string
+    - name: phone
+      label: Phone number shown after that message (leave empty to use the main phone number)
+      type: string
+  - name: body
+    label: Page text (edit like a normal document; use the picture button to add or swap photos)
+    type: rich-text
+- name: terms
+  label: 'PAGE: Terms of use'
+  type: file
+  path: src/terms.md
+  format: yaml-frontmatter
+  fields:
+  - name: title
+    label: Page title (big heading at the top)
+    type: string
+  - name: subtitle
+    label: Short line under the title (optional)
+    type: string
+  - name: heroImage
+    label: Big picture at the top of the page (optional)
+    type: image
+    options:
+      media: images
+  - name: heroAlt
+    label: Describe that picture for people who cannot see it
+    type: string
+  - name: form
+    label: Form button (optional)
+    type: object
+    fields:
+    - name: label
+      label: Button text, like Request a tour
+      type: string
+    - name: url
+      label: Link to the online form (paste the Google Forms link). Leave empty to show the call message instead.
+      type: string
+    - name: help
+      label: Message shown when there is no form link yet, like To arrange a tour, please call
+      type: string
+    - name: phone
+      label: Phone number shown after that message (leave empty to use the main phone number)
+      type: string
+  - name: body
+    label: Page text (edit like a normal document; use the picture button to add or swap photos)
+    type: rich-text
+- name: board
+  label: 'PAGE: Board of Directors (members and meeting dates)'
+  type: file
+  path: src/_data/board.json
+  format: json
+  fields:
+  - name: pageTitle
+    label: Page title
+    type: string
+  - name: pageSubtitle
+    label: Line under the title
+    type: string
+  - name: membersHeading
+    label: Heading above the members
+    type: string
+  - name: year
+    label: Meeting year
+    type: number
+  - name: meetingsHeading
+    label: Words after the year in the meetings heading
+    type: string
+  - name: members
+    label: Board members
+    type: object
+    fields:
+    - name: name
+      label: Name
+      type: string
+    - name: role
+      label: Role (President, Member...)
+      type: string
+    list: true
+  - name: meetings
+    label: Meeting dates
+    type: object
+    fields:
+    - name: date
+      label: Date
+      type: date
+    - name: note
+      label: Note (optional, like Annual meeting)
+      type: string
+    list: true
+  - name: time
+    label: Start time
+    type: string
+  - name: place
+    label: Place
+    type: string
+  - name: extraNote
+    label: Extra sentence
+    type: string
+- name: stats
+  label: 'PAGE: Statistics (text, numbers and charts)'
+  type: file
+  path: src/_data/stats.json
+  format: json
+  fields:
+  - name: pageTitle
+    label: Page title
+    type: string
+  - name: pageSubtitle
+    label: Line under the title
+    type: string
+  - name: openingHeading
+    label: Heading above the opening paragraph
+    type: string
+  - name: intro
+    label: Opening paragraph
+    type: text
+  - name: totalHeading
+    label: Heading above the yearly totals chart
+    type: string
+  - name: agencyHeading
+    label: Heading above the agency chart (the years are added automatically)
+    type: string
+  - name: agencyIntro
+    label: Paragraph above the agency chart
+    type: text
+  - name: typeHeading
+    label: Heading above the table
+    type: string
+  - name: years
+    label: Years (one per box, oldest first)
+    type: number
+    list: true
+  - name: totals
+    label: Total dispatches for each year (same order as the years)
+    type: number
+    list: true
+  - name: series
+    label: Dispatch types (law enforcement, fire...)
+    type: object
+    fields:
+    - name: name
+      label: Type name
+      type: string
+    - name: values
+      label: Counts (same order as the years)
+      type: number
+      list: true
+    list: true
+- name: phones
+  label: 'PAGE: Phone numbers'
+  type: file
+  path: src/_data/phones.json
+  format: json
+  fields:
+  - name: pageTitle
+    label: Page title
+    type: string
+  - name: pageSubtitle
+    label: Line under the title
+    type: string
+  - name: groups
+    label: Groups (Law Enforcement, Fire, Health...)
+    type: object
+    fields:
+    - name: name
+      label: Group name
+      type: string
+    - name: items
+      label: Numbers
+      type: object
+      fields:
+      - name: name
+        label: Name
+        type: string
+      - name: number
+        label: Phone number
+        type: string
+      list: true
+    list: true
+  - name: note
+    label: Note under the phone numbers (leave empty to hide)
+    type: text
+- name: radio
+  label: 'PAGE: Radio frequencies (on the Phone numbers page)'
+  type: file
+  path: src/_data/radio.json
+  format: json
+  fields:
+  - name: title
+    label: Heading
+    type: string
+  - name: items
+    label: Frequencies
+    type: object
+    fields:
+    - name: name
+      label: Agency
+      type: string
+    - name: freq
+      label: Frequency
+      type: string
+    list: true
+- name: links
+  label: 'PAGE: Helpful links'
+  type: file
+  path: src/_data/links.json
+  format: json
+  fields:
+  - name: pageTitle
+    label: Page title
+    type: string
+  - name: pageSubtitle
+    label: Line under the title
+    type: string
+  - name: homeCount
+    label: How many links to show on the home page
+    type: number
   - name: links
-    label: Helpful links
-    type: file
-    path: src/_data/links.json
-    format: json
+    label: Links
+    type: object
     fields:
-      - name: links
-        type: object
-        list: true
-        fields:
-          - { name: name, label: "Link name", type: string }
-          - { name: url, label: "Web address", type: string }
-  - name: forms
-    label: Form links (Google Forms)
-    type: file
-    path: src/_data/forms.json
-    format: json
+    - name: name
+      label: Link name
+      type: string
+    - name: url
+      label: Web address
+      type: string
+    list: true
+- name: contact
+  label: 'PAGE: Contact (phones, emails, staff, directions)'
+  type: file
+  path: src/_data/staff.json
+  format: json
+  fields:
+  - name: pageTitle
+    label: Page title
+    type: string
+  - name: pageSubtitle
+    label: Line under the title
+    type: string
+  - name: contactHeading
+    label: Heading above the contact lines
+    type: string
+  - name: lines
+    label: Contact lines
+    type: object
     fields:
-      - { name: streetSign, label: "Street sign request form link", type: string }
-      - { name: tour, label: "Tour request form link", type: string }
-      - { name: resource, label: "Resource request form link", type: string }
-      - { name: resourcePdf, label: "Resource request form PDF", type: file, options: { media: files } }
-  - name: downloads
-    label: Downloads (PDFs)
-    type: file
-    path: src/_data/downloads.json
-    format: json
+    - name: label
+      label: Label
+      type: string
+    - name: value
+      label: Phone number, email or words
+      type: string
+    - name: kind
+      label: What is it?
+      type: select
+      options:
+        values:
+        - phone
+        - email
+        - text
+    list: true
+  - name: staffHeading
+    label: Staff heading
+    type: string
+  - name: people
+    label: Staff (turn Show off to hide someone)
+    type: object
     fields:
-      - name: items
-        type: object
-        list: true
-        fields:
-          - { name: title, label: "Title", type: string }
-          - { name: file, label: "File (PDF)", type: file, options: { media: files } }
-          - { name: note, label: "Note (optional)", type: string }
-  - name: about
-    label: About the EOC page
-    type: file
-    path: src/about.md
-    format: yaml-frontmatter
-    fields: [ { name: title, type: string }, { name: body, type: rich-text } ]
-  - name: addressing
-    label: Addressing and street signs page
-    type: file
-    path: src/addressing.md
-    format: yaml-frontmatter
-    fields: [ { name: title, type: string }, { name: body, type: rich-text } ]
-  - name: telecommunicators
-    label: Telecommunicators page
-    type: file
-    path: src/telecommunicators.md
-    format: yaml-frontmatter
-    fields: [ { name: title, type: string }, { name: body, type: rich-text } ]
-  - name: lepc
-    label: LEPC page text
-    type: file
-    path: src/lepc.md
-    format: yaml-frontmatter
-    fields: [ { name: title, type: string }, { name: body, type: rich-text } ]
-  - name: community
-    label: Community page
-    type: file
-    path: src/community.md
-    format: yaml-frontmatter
-    fields: [ { name: title, type: string }, { name: body, type: rich-text } ]
-  - name: terms
-    label: Terms of use
-    type: file
-    path: src/terms.md
-    format: yaml-frontmatter
-    fields: [ { name: title, type: string }, { name: body, type: rich-text } ]
-  - name: site
-    label: Address, phone and email (appears everywhere)
-    type: file
-    path: src/_data/site.json
-    format: json
+    - name: name
+      label: Name
+      type: string
+    - name: role
+      label: Job title
+      type: string
+    - name: show
+      label: Show on the site?
+      type: boolean
+    list: true
+  - name: directionsHeading
+    label: Directions heading
+    type: string
+  - name: directionsText
+    label: Directions
+    type: text
+  - name: directionsPlace
+    label: Name shown above the street address
+    type: string
+- name: gallery
+  label: 'PAGE: Photos'
+  type: file
+  path: src/_data/gallery.json
+  format: json
+  fields:
+  - name: pageTitle
+    label: Page title
+    type: string
+  - name: intro
+    label: Sentence above the photos (optional)
+    type: text
+  - name: photos
+    label: Photos (drag to reorder; add new ones with the button)
+    type: object
     fields:
-      - { name: name, label: "Full agency name", type: string }
-      - { name: shortName, label: "Short name (top of every page)", type: string }
-      - { name: tagline, label: "Line under the name", type: string }
-      - { name: emergencyText, label: "Red 911 bar message", type: string }
-      - { name: nonEmergency, label: "Non-emergency phone", type: string }
-      - { name: addressingPhone, label: "Addressing and alarms phone", type: string }
-      - { name: email, label: "General email", type: string }
-      - { name: lepcEmail, label: "LEPC email", type: string }
-      - { name: street, label: "Street address", type: string }
-      - { name: city, label: "City, state, ZIP", type: string }
-  - name: gallery
-    label: Photos page
-    type: file
-    path: src/_data/gallery.json
-    format: json
+    - name: image
+      label: Photo
+      type: image
+      options:
+        media: images
+    - name: caption
+      label: Caption (optional)
+      type: string
+    - name: alt
+      label: Describe the photo for people who cannot see it
+      type: string
+    list: true
+- name: downloads
+  label: 'PAGE: Downloads and forms'
+  type: file
+  path: src/_data/downloads.json
+  format: json
+  fields:
+  - name: pageTitle
+    label: Page title
+    type: string
+  - name: pageSubtitle
+    label: Line under the title
+    type: string
+  - name: emptyText
+    label: Message when there is nothing listed
+    type: string
+  - name: items
+    label: Documents and forms
+    type: object
     fields:
-      - { name: intro, label: "Sentence above the photos (optional)", type: text }
-      - name: photos
-        label: Photos
-        type: object
-        list: true
-        fields:
-          - { name: image, label: "Photo", type: image, options: { media: images } }
-          - { name: caption, label: "Caption (optional)", type: string }
-          - { name: alt, label: "Describe the photo for people who cannot see it", type: string }
-  - name: social
-    label: Facebook page
-    type: file
-    path: src/_data/social.json
-    format: json
+    - name: title
+      label: Title
+      type: string
+    - name: file
+      label: PDF or document (pick or upload one)
+      type: file
+      options:
+        media: files
+    - name: url
+      label: OR paste a web link instead, like a Google Form
+      type: string
+    - name: note
+      label: Note (optional)
+      type: string
+    list: true
+- name: extra
+  label: 'NEW PAGES: Add or edit extra pages'
+  type: collection
+  path: src/extra
+  format: yaml-frontmatter
+  fields:
+  - name: title
+    label: Page title (big heading at the top)
+    type: string
+  - name: subtitle
+    label: Short line under the title (optional)
+    type: string
+  - name: heroImage
+    label: Big picture at the top of the page (optional)
+    type: image
+    options:
+      media: images
+  - name: heroAlt
+    label: Describe that picture for people who cannot see it
+    type: string
+  - name: form
+    label: Form button (optional)
+    type: object
     fields:
-      - { name: facebookUrl, label: "Facebook page web address (leave empty to hide)", type: string }
-      - { name: showFeed, label: "Show recent posts on the home page?", type: boolean }
-  - name: radio
-    label: Radio frequencies
-    type: file
-    path: src/_data/radio.json
-    format: json
+    - name: label
+      label: Button text, like Request a tour
+      type: string
+    - name: url
+      label: Link to the online form (paste the Google Forms link). Leave empty to show the call message instead.
+      type: string
+    - name: help
+      label: Message shown when there is no form link yet, like To arrange a tour, please call
+      type: string
+    - name: phone
+      label: Phone number shown after that message (leave empty to use the main phone number)
+      type: string
+  - name: body
+    label: Page text (edit like a normal document; use the picture button to add or swap photos)
+    type: rich-text
+- name: nav
+  label: 'SITE: Menu and footer links'
+  type: file
+  path: src/_data/nav.json
+  format: json
+  fields:
+  - name: menu
+    label: Menu (the Menu button at the top)
+    type: object
     fields:
-      - { name: title, label: "Heading", type: string }
-      - name: items
-        label: Frequencies
-        type: object
-        list: true
-        fields:
-          - { name: name, label: "Agency", type: string }
-          - { name: freq, label: "Frequency", type: string }
+    - name: label
+      label: Words in the menu
+      type: string
+    - name: url
+      label: Page address (like /about/ or a new page like /my-page/)
+      type: string
+    list: true
+  - name: footer
+    label: Links in the footer (bottom of every page)
+    type: object
+    fields:
+    - name: label
+      label: Words
+      type: string
+    - name: url
+      label: Page address
+      type: string
+    list: true
+- name: site
+  label: 'SITE: Address, phone, email, logo and footer text (appears everywhere)'
+  type: file
+  path: src/_data/site.json
+  format: json
+  fields:
+  - name: name
+    label: Full agency name
+    type: string
+  - name: shortName
+    label: Short name beside the logo
+    type: string
+  - name: tagline
+    label: Line under the short name
+    type: string
+  - name: logo
+    label: Logo picture (white on a transparent background works best)
+    type: image
+    options:
+      media: images
+  - name: emergencyText
+    label: Red bar at the very top
+    type: string
+  - name: nonEmergencyLabel
+    label: Words before the non-emergency number in the red bar
+    type: string
+  - name: nonEmergency
+    label: Main non-emergency phone
+    type: string
+  - name: addressingPhone
+    label: Addressing and alarms phone
+    type: string
+  - name: email
+    label: Main email
+    type: string
+  - name: lepcEmail
+    label: LEPC email
+    type: string
+  - name: street
+    label: Street address
+    type: string
+  - name: city
+    label: City, state, ZIP
+    type: string
+  - name: pageTitleSuffix
+    label: Name shown in the browser tab after the page title
+    type: string
+  - name: metaDescription
+    label: Short description shown in Google search results
+    type: text
+  - name: footerLinksTitle
+    label: Footer middle column heading
+    type: string
+  - name: footerEmergencyTitle
+    label: Footer emergency heading
+    type: string
+  - name: footerDialText
+    label: Word before 911 in the footer
+    type: string
+  - name: footerDialNumber
+    label: Number in the footer (911)
+    type: string
+  - name: footerEmergencyText
+    label: Footer emergency sentence
+    type: text
+  - name: facebookText
+    label: Words next to the Facebook logo
+    type: string
+  - name: legalNote
+    label: Line after the copyright year
+    type: string
+- name: social
+  label: 'SITE: Facebook page'
+  type: file
+  path: src/_data/social.json
+  format: json
+  fields:
+  - name: facebookUrl
+    label: Facebook page web address (leave empty to hide)
+    type: string
+  - name: showFeed
+    label: Show recent posts on the home page?
+    type: boolean

@@ -1,13 +1,8 @@
 ---
 title: What is the Raleigh County EOC?
-subtitle: ''
 heroImage: /images/eoc-building.jpg
-heroAlt: The Raleigh County Emergency Services building, a long single-story brick building with a green metal roof.
-form:
-  label: ''
-  url: ''
-  help: ''
-  phone: ''
+heroAlt: The Raleigh County Emergency Services building, a long single-story
+  brick building with a green metal roof.
 ---
 The Raleigh County E.O.C. (Emergency Operating Center) is a 24-hour emergency assistance center that serves a minimum of 79,000 people. If you dial 911 in Raleigh County, highly trained telecommunicators from the E.O.C. answer your call and immediately dispatch the appropriate agencies.
 
@@ -33,3 +28,4 @@ Our current departments include an Administrative Office, Emergency Services, Di
 - Aerial photography to supplement the mapping system
 - Upgrade the Computer Aided Dispatch system
 - Upgrade the recorder
+

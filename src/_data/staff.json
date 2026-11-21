@@ -1,6 +1,5 @@
 {
   "pageTitle": "Contact Us",
-  "pageSubtitle": "",
   "contactHeading": "Raleigh County Emergency Services Authority",
   "lines": [
     {
@@ -37,6 +36,16 @@
       "show": true
     },
     {
+      "name": "Richard Filipek",
+      "role": "Deputy Director",
+      "show": true
+    },
+    {
+      "name": "Cody Fortner",
+      "role": "911/ Communications Chief",
+      "show": true
+    },
+    {
       "name": "Kevin Roop",
       "role": "Operations Chief",
       "show": true
@@ -50,16 +59,6 @@
       "name": "Tabitha Horn",
       "role": "Emergency Program Manager",
       "show": true
-    },
-    {
-      "name": "Richard Filipek",
-      "role": "",
-      "show": false
-    },
-    {
-      "name": "Cody Fortner",
-      "role": "",
-      "show": false
     }
   ],
   "directionsHeading": "Directions to the Raleigh County 911 Center",

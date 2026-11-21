@@ -1,8 +1,13 @@
 ---
 title: What is the Raleigh County EOC?
+subtitle: ''
 heroImage: /images/eoc-building.jpg
-heroAlt: The Raleigh County Emergency Services building, a long single-story
-  brick building with a green metal roof.
+heroAlt: The Raleigh County Emergency Services building, a long single-story brick building with a green metal roof.
+form:
+  label: ''
+  url: ''
+  help: ''
+  phone: ''
 ---
 The Raleigh County E.O.C. (Emergency Operating Center) is a 24-hour emergency assistance center that serves a minimum of 79,000 people. If you dial 911 in Raleigh County, highly trained telecommunicators from the E.O.C. answer your call and immediately dispatch the appropriate agencies.
 
@@ -22,10 +27,18 @@ With an assortment of responsibilities, the E.O.C. has a workforce of 33 employe
 
 Our current departments include an Administrative Office, Emergency Services, Dispatch/911, Security / Data Entry, and the Street Signs Department.
 
+## What we do
+
+- **911 call taking and dispatch.** Our telecommunicators answer every 911 call and send the right help. [See how 911 works](/telecommunicators/).
+- **Addressing and street signs.** We map and number every home and business in the county and provide street signs. [Addressing and street signs](/addressing/).
+- **Alarm monitoring.** We watch security, fire, panic and medical alarms around the clock. [About alarm monitoring](/addressing/#alarm-monitoring).
+- **Emergency planning.** The Local Emergency Planning Committee prepares for hazardous materials accidents. [About the LEPC](/lepc/).
+- **Disaster response, training and community support.** Our Emergency Services staff respond to floods and other disasters, run training exercises with local partners, and visit schools and groups. [Community involvement](/community/).
+- **By the numbers.** [Dispatch statistics](/statistics/) show how many calls we handle each year.
+
 ## Plans for the next five years
 
 - Upgrade radio consoles
 - Aerial photography to supplement the mapping system
 - Upgrade the Computer Aided Dispatch system
 - Upgrade the recorder
-
